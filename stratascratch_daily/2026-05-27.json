@@ -1,0 +1,150 @@
+{
+  "date": "2026-05-27",
+  "weekday": "Wednesday",
+  "difficulty_mix": {
+    "easy": 1,
+    "medium": 4,
+    "hard": 0,
+    "rule": "weekday (non-Monday): 1E + 4M"
+  },
+  "languages": ["sql (PostgreSQL)", "python (pandas)", "pyspark"],
+  "questions": [
+    {
+      "id": 9805,
+      "slug": "9805-find-drafts-which-contains-the-word-optimism",
+      "title": "Find drafts which contains the word 'optimism'",
+      "difficulty": 1,
+      "category": "String",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9805-find-drafts-which-contains-the-word-optimism?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9805-find-drafts-which-contains-the-word-optimism?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9805-find-drafts-which-contains-the-word-optimism?code_type=6"
+      },
+      "tables": ["google_file_store"],
+      "question": "Find drafts which contains the word 'optimism'.",
+      "schema_sql": {
+        "google_file_store": [
+          {"name": "contents", "type": "text"},
+          {"name": "filename", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 9892,
+      "slug": "9892-second-highest-salary",
+      "title": "Second Highest Salary",
+      "difficulty": 2,
+      "category": "Window Functions",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9892-second-highest-salary?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9892-second-highest-salary?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9892-second-highest-salary?code_type=6"
+      },
+      "tables": ["employee"],
+      "question": "Find the second highest salary of employees.",
+      "schema_sql": {
+        "employee": [
+          {"name": "id", "type": "bigint"},
+          {"name": "first_name", "type": "text"},
+          {"name": "last_name", "type": "text"},
+          {"name": "age", "type": "bigint"},
+          {"name": "sex", "type": "text"},
+          {"name": "employee_title", "type": "text"},
+          {"name": "department", "type": "text"},
+          {"name": "salary", "type": "bigint"},
+          {"name": "target", "type": "bigint"},
+          {"name": "bonus", "type": "bigint"},
+          {"name": "email", "type": "text"},
+          {"name": "city", "type": "text"},
+          {"name": "address", "type": "text"},
+          {"name": "manager_id", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 9894,
+      "slug": "9894-employee-and-manager-salaries",
+      "title": "Employee and Manager Salaries",
+      "difficulty": 2,
+      "category": "Join (self-join)",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9894-employee-and-manager-salaries?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9894-employee-and-manager-salaries?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9894-employee-and-manager-salaries?code_type=6"
+      },
+      "tables": ["employee"],
+      "question": "Find employees who are earning more than their managers. Output the employee's first name along with the corresponding salary.",
+      "schema_sql": {
+        "employee": [
+          {"name": "id", "type": "bigint"},
+          {"name": "first_name", "type": "text"},
+          {"name": "salary", "type": "bigint"},
+          {"name": "manager_id", "type": "bigint"},
+          {"name": "...", "type": "(same 14 columns as #9892)"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 2110,
+      "slug": "2110-salary-less-than-twice-the-average",
+      "title": "Salary Less Than Twice The Average",
+      "difficulty": 2,
+      "category": "Subquery",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/2110-salary-less-than-twice-the-average?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/2110-salary-less-than-twice-the-average?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/2110-salary-less-than-twice-the-average?code_type=6"
+      },
+      "tables": ["map_employee_hierarchy", "dim_employee"],
+      "question": "Get the list of managers whose salary is less than twice the average salary of employees reporting to them. Output their ID, salary and the average salary of employees reporting to them.",
+      "schema_sql": {
+        "map_employee_hierarchy": [
+          {"name": "empl_id", "type": "text"},
+          {"name": "manager_empl_id", "type": "text"}
+        ],
+        "dim_employee": [
+          {"name": "empl_id", "type": "text"},
+          {"name": "empl_name", "type": "text"},
+          {"name": "empl_dob", "type": "date"},
+          {"name": "empl_city", "type": "text"},
+          {"name": "empl_pin", "type": "bigint"},
+          {"name": "salary", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 10285,
+      "slug": "10285-acceptance-rate-by-date",
+      "title": "Acceptance Rate By Date",
+      "difficulty": 2,
+      "category": "Aggregation + Date",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10285-acceptance-rate-by-date?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10285-acceptance-rate-by-date?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10285-acceptance-rate-by-date?code_type=6"
+      },
+      "tables": ["fb_friend_requests"],
+      "question": "Calculate the friend acceptance rate for each date when friend requests were sent. A request is sent if action='sent' and accepted if action='accepted'. If a request is not accepted, there is no record of it being accepted. Only include dates where requests were sent and at least one was accepted (acceptance can occur on any date after the request).",
+      "schema_sql": {
+        "fb_friend_requests": [
+          {"name": "user_id_sender", "type": "text"},
+          {"name": "user_id_receiver", "type": "text"},
+          {"name": "date", "type": "date"},
+          {"name": "action", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    }
+  ],
+  "selection_meta": {
+    "pool_sizes_freemium": {"easy": 29, "medium": 33, "hard": 5},
+    "excluded_recent_attempts": [2145, 2161, 10314],
+    "category_balance_check": "5 unique categories: String, Window Functions, Join, Subquery, Aggregation+Date",
+    "generated_at": "2026-05-27T10:00:00+09:00",
+    "generated_by": "claude (manual run, scheduled task pending)"
+  }
+}
