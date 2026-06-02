@@ -1,0 +1,152 @@
+{
+  "date": "2026-05-28",
+  "weekday": "Thursday",
+  "difficulty_mix": {
+    "easy": 1,
+    "medium": 4,
+    "hard": 0,
+    "rule": "weekday (non-Monday): 1E + 4M"
+  },
+  "languages": ["sql (PostgreSQL)", "python (pandas)", "pyspark"],
+  "questions": [
+    {
+      "id": 9842,
+      "slug": "9842-find-all-workers-whose-first-name-contains-6-letters-and-also-ends-with-the-letter-h",
+      "title": "First Names With Six Letters Ending in 'h'",
+      "difficulty": 1,
+      "category": "String/Text",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9842-find-all-workers-whose-first-name-contains-6-letters-and-also-ends-with-the-letter-h?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9842-find-all-workers-whose-first-name-contains-6-letters-and-also-ends-with-the-letter-h?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9842-find-all-workers-whose-first-name-contains-6-letters-and-also-ends-with-the-letter-h?code_type=6"
+      },
+      "tables": ["worker"],
+      "question": "Find all workers whose first name contains 6 letters and also ends with the letter 'h'. Display all information about the workers in output.",
+      "schema_sql": {
+        "worker": [
+          {"name": "department", "type": "text"},
+          {"name": "first_name", "type": "text"},
+          {"name": "joining_date", "type": "date"},
+          {"name": "last_name", "type": "text"},
+          {"name": "salary", "type": "bigint"},
+          {"name": "worker_id", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 10322,
+      "slug": "10322-finding-user-purchases",
+      "title": "Finding User Purchases",
+      "difficulty": 2,
+      "category": "Date/Time",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10322-finding-user-purchases?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10322-finding-user-purchases?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10322-finding-user-purchases?code_type=6"
+      },
+      "tables": ["amazon_transactions"],
+      "question": "Identify returning active users by finding users who made a second purchase within 1 to 7 days after their first purchase. Ignore same-day purchases. Output a list of these `user_ids`.",
+      "schema_sql": {
+        "amazon_transactions": [
+          {"name": "created_at", "type": "date"},
+          {"name": "id", "type": "bigint"},
+          {"name": "item", "type": "text"},
+          {"name": "revenue", "type": "bigint"},
+          {"name": "user_id", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 9897,
+      "slug": "9897-highest-salary-in-department",
+      "title": "Highest Salary In Department",
+      "difficulty": 2,
+      "category": "Window Functions",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9897-highest-salary-in-department?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9897-highest-salary-in-department?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9897-highest-salary-in-department?code_type=6"
+      },
+      "tables": ["employee"],
+      "question": "Find the employee with the highest salary per department. Output the department name, employee's first name along with the corresponding salary.",
+      "schema_sql": {
+        "employee": [
+          {"name": "address", "type": "text"},
+          {"name": "age", "type": "bigint"},
+          {"name": "bonus", "type": "bigint"},
+          {"name": "city", "type": "text"},
+          {"name": "department", "type": "text"},
+          {"name": "email", "type": "text"},
+          {"name": "employee_title", "type": "text"},
+          {"name": "first_name", "type": "text"},
+          {"name": "id", "type": "bigint"},
+          {"name": "last_name", "type": "text"},
+          {"name": "manager_id", "type": "bigint"},
+          {"name": "salary", "type": "bigint"},
+          {"name": "sex", "type": "text"},
+          {"name": "target", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 10085,
+      "slug": "10085-facebook-matching-users-pairs",
+      "title": "Meta/Facebook Matching Users Pairs",
+      "difficulty": 2,
+      "category": "Join (self-join)",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10085-facebook-matching-users-pairs?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10085-facebook-matching-users-pairs?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10085-facebook-matching-users-pairs?code_type=6"
+      },
+      "tables": ["facebook_employees"],
+      "question": "Find matching pairs of Meta/Facebook employees such that they are both of the same nation, different age, same gender, and at different seniority levels. Output ids of paired employees.",
+      "schema_sql": {
+        "facebook_employees": [
+          {"name": "age", "type": "bigint"},
+          {"name": "gender", "type": "text"},
+          {"name": "id", "type": "bigint"},
+          {"name": "is_senior", "type": "boolean"},
+          {"name": "location", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 2170,
+      "slug": "2170-department-workforce-analysis",
+      "title": "Department Workforce Analysis",
+      "difficulty": 2,
+      "category": "Aggregation",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/2170-department-workforce-analysis?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/2170-department-workforce-analysis?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/2170-department-workforce-analysis?code_type=6"
+      },
+      "tables": ["techcorp_workforce"],
+      "question": "The workforce planning team is analyzing department growth since the company's expansion, focusing on teams that have grown substantially. For each department with 5 or more employees hired after 2020, return the `name`, `headcount`, `total payroll`, and `average salary`.",
+      "schema_sql": {
+        "techcorp_workforce": [
+          {"name": "department", "type": "text"},
+          {"name": "first_name", "type": "text"},
+          {"name": "id", "type": "bigint"},
+          {"name": "joining_date", "type": "date"},
+          {"name": "last_name", "type": "text"},
+          {"name": "phone_number", "type": "text"},
+          {"name": "salary", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    }
+  ],
+  "selection_meta": {
+    "pool_sizes_freemium": {"easy": 29, "medium": 33, "hard": 5},
+    "excluded_recent_attempts": [9805, 9892, 9894, 2110, 10285, 2145, 2161, 10314],
+    "category_balance_check": "5 unique categories: String/Text, Date/Time, Window Functions, Join (self-join), Aggregation",
+    "generated_at": "2026-05-28T00:00:00+00:00",
+    "generated_by": "scheduled task"
+  }
+}

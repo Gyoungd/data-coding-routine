@@ -1,0 +1,156 @@
+{
+  "date": "2026-05-29",
+  "weekday": "Friday",
+  "difficulty_mix": {
+    "easy": 1,
+    "medium": 4,
+    "hard": 0,
+    "rule": "Non-Monday mix: 1 Easy + 4 Medium"
+  },
+  "languages": ["sql (PostgreSQL)", "python (pandas)", "pyspark"],
+  "questions": [
+    {
+      "id": 9805,
+      "slug": "9805-find-drafts-which-contains-the-word-optimism",
+      "title": "Find drafts which contains the word 'optimism'",
+      "difficulty": 1,
+      "category": "String/Text",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9805-find-drafts-which-contains-the-word-optimism?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9805-find-drafts-which-contains-the-word-optimism?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9805-find-drafts-which-contains-the-word-optimism?code_type=6"
+      },
+      "tables": ["google_file_store"],
+      "question": "-- Find drafts which contains the word 'optimism'.",
+      "schema_sql": {
+        "google_file_store": [
+          {"name": "contents", "type": "text"},
+          {"name": "filename", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 10285,
+      "slug": "10285-acceptance-rate-by-date",
+      "title": "Acceptance Rate By Date",
+      "difficulty": 2,
+      "category": "Date/Time",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10285-acceptance-rate-by-date?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10285-acceptance-rate-by-date?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10285-acceptance-rate-by-date?code_type=6"
+      },
+      "tables": ["fb_friend_requests"],
+      "question": "-- Calculate the friend acceptance rate for each `date` when friend requests were sent. A request is sent if `action` = `sent` and accepted if `action` = `accepted`. If a request is not accepted, there is no record of it being accepted in the table.\n\n-- The output will only include dates where requests were sent and at least one of them was accepted (acceptance can occur on any date after the request is sent).",
+      "schema_sql": {
+        "fb_friend_requests": [
+          {"name": "action", "type": "text"},
+          {"name": "date", "type": "date"},
+          {"name": "user_id_receiver", "type": "text"},
+          {"name": "user_id_sender", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 9894,
+      "slug": "9894-employee-and-manager-salaries",
+      "title": "Employee and Manager Salaries",
+      "difficulty": 2,
+      "category": "Join (self-join)",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9894-employee-and-manager-salaries?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9894-employee-and-manager-salaries?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9894-employee-and-manager-salaries?code_type=6"
+      },
+      "tables": ["employee"],
+      "question": "-- Find employees who are earning more than their managers. Output the employee's first name along with the corresponding salary.",
+      "schema_sql": {
+        "employee": [
+          {"name": "address", "type": "text"},
+          {"name": "age", "type": "bigint"},
+          {"name": "bonus", "type": "bigint"},
+          {"name": "city", "type": "text"},
+          {"name": "department", "type": "text"},
+          {"name": "email", "type": "text"},
+          {"name": "employee_title", "type": "text"},
+          {"name": "first_name", "type": "text"},
+          {"name": "id", "type": "bigint"},
+          {"name": "last_name", "type": "text"},
+          {"name": "manager_id", "type": "bigint"},
+          {"name": "salary", "type": "bigint"},
+          {"name": "sex", "type": "text"},
+          {"name": "target", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 9897,
+      "slug": "9897-highest-salary-in-department",
+      "title": "Highest Salary In Department",
+      "difficulty": 2,
+      "category": "Subquery/CTE",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9897-highest-salary-in-department?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9897-highest-salary-in-department?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9897-highest-salary-in-department?code_type=6"
+      },
+      "tables": ["employee"],
+      "question": "-- Find the employee with the highest salary per department.\n-- Output the department name, employee's first name along with the corresponding salary.",
+      "schema_sql": {
+        "employee": [
+          {"name": "address", "type": "text"},
+          {"name": "age", "type": "bigint"},
+          {"name": "bonus", "type": "bigint"},
+          {"name": "city", "type": "text"},
+          {"name": "department", "type": "text"},
+          {"name": "email", "type": "text"},
+          {"name": "employee_title", "type": "text"},
+          {"name": "first_name", "type": "text"},
+          {"name": "id", "type": "bigint"},
+          {"name": "last_name", "type": "text"},
+          {"name": "manager_id", "type": "bigint"},
+          {"name": "salary", "type": "bigint"},
+          {"name": "sex", "type": "text"},
+          {"name": "target", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 2170,
+      "slug": "2170-department-workforce-analysis",
+      "title": "Department Workforce Analysis",
+      "difficulty": 2,
+      "category": "Aggregation",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/2170-department-workforce-analysis?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/2170-department-workforce-analysis?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/2170-department-workforce-analysis?code_type=6"
+      },
+      "tables": ["techcorp_workforce"],
+      "question": "-- The workforce planning team is analyzing department growth since the company's expansion, focusing on teams that have grown substantially.\n\n-- For each department with 5 or more employees hired after 2020, return the `name`, `headcount`, `total payroll`, and `average salary`.",
+      "schema_sql": {
+        "techcorp_workforce": [
+          {"name": "department", "type": "text"},
+          {"name": "first_name", "type": "text"},
+          {"name": "id", "type": "bigint"},
+          {"name": "joining_date", "type": "date"},
+          {"name": "last_name", "type": "text"},
+          {"name": "phone_number", "type": "text"},
+          {"name": "salary", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    }
+  ],
+  "selection_meta": {
+    "pool_sizes_freemium": {"easy": 29, "medium": 33, "hard": 0},
+    "excluded_recent_attempts": [2110, 9842, 10322],
+    "category_balance_check": "5 unique categories: String/Text, Date/Time, Join (self-join), Subquery/CTE, Aggregation",
+    "generated_at": "2026-05-29T00:00:00+00:00",
+    "generated_by": "scheduled task"
+  }
+}

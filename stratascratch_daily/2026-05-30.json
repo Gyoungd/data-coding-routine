@@ -1,0 +1,148 @@
+{
+  "date": "2026-05-30",
+  "weekday": "Saturday",
+  "difficulty_mix": {
+    "easy": 1,
+    "medium": 4,
+    "hard": 0,
+    "rule": "Non-Monday mix: 1 Easy + 4 Medium"
+  },
+  "languages": ["sql (PostgreSQL)", "python (pandas)", "pyspark"],
+  "questions": [
+    {
+      "id": 10005,
+      "slug": "10005-hour-of-highest-gas-expense",
+      "title": "Hour Of Highest Gas Expense",
+      "difficulty": 1,
+      "category": "Date/Time",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10005-hour-of-highest-gas-expense?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10005-hour-of-highest-gas-expense?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10005-hour-of-highest-gas-expense?code_type=6"
+      },
+      "tables": ["lyft_rides"],
+      "question": "-- Find the hour with the highest gasoline cost. Assume there's only 1 hour with the highest gas cost.",
+      "schema_sql": {
+        "lyft_rides": [
+          {"name": "gasoline_cost", "type": "double precision"},
+          {"name": "hour", "type": "bigint"},
+          {"name": "index", "type": "bigint"},
+          {"name": "travel_distance", "type": "double precision"},
+          {"name": "weather", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 9817,
+      "slug": "9817-find-the-number-of-times-each-word-appears-in-drafts",
+      "title": "Count Occurrences Of Words In Drafts",
+      "difficulty": 2,
+      "category": "String/Text",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9817-find-the-number-of-times-each-word-appears-in-drafts?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9817-find-the-number-of-times-each-word-appears-in-drafts?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9817-find-the-number-of-times-each-word-appears-in-drafts?code_type=6"
+      },
+      "tables": ["google_file_store"],
+      "question": "Find the number of times each word appears in the `contents` column across all rows in the `google_file_store` dataset. Output two columns: `word` and `occurrences`.",
+      "schema_sql": {
+        "google_file_store": [
+          {"name": "contents", "type": "text"},
+          {"name": "filename", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 9856,
+      "slug": "9856-find-employees-with-the-same-salary",
+      "title": "Employees With the Same Salary",
+      "difficulty": 2,
+      "category": "Join (self-join)",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9856-find-employees-with-the-same-salary?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9856-find-employees-with-the-same-salary?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9856-find-employees-with-the-same-salary?code_type=6"
+      },
+      "tables": ["worker"],
+      "question": "-- Find employees who earn the same salary.\r\n\r\n-- Output the worker id along with the first name and the salary in descending order.",
+      "schema_sql": {
+        "worker": [
+          {"name": "department", "type": "text"},
+          {"name": "first_name", "type": "text"},
+          {"name": "joining_date", "type": "date"},
+          {"name": "last_name", "type": "text"},
+          {"name": "salary", "type": "bigint"},
+          {"name": "worker_id", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 10159,
+      "slug": "10159-ranking-most-active-guests",
+      "title": "Ranking Most Active Guests",
+      "difficulty": 2,
+      "category": "Window Functions",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10159-ranking-most-active-guests?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10159-ranking-most-active-guests?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10159-ranking-most-active-guests?code_type=6"
+      },
+      "tables": ["airbnb_contacts"],
+      "question": "Identify the most engaged guests by ranking them according to their overall messaging activity. The most active guest, meaning the one who has exchanged the most messages with hosts, should have the highest rank. If two or more guests have the same number of messages, they should have the same rank. Importantly, the ranking shouldn't skip any numbers, even if many guests share the same rank. Present your results in a clear format, showing the rank, guest identifier, and total number of messages for each guest, ordered from the most to least active.",
+      "schema_sql": {
+        "airbnb_contacts": [
+          {"name": "ds_checkin", "type": "date"},
+          {"name": "ds_checkout", "type": "date"},
+          {"name": "id_guest", "type": "text"},
+          {"name": "id_host", "type": "text"},
+          {"name": "id_listing", "type": "text"},
+          {"name": "n_guests", "type": "bigint"},
+          {"name": "n_messages", "type": "bigint"},
+          {"name": "ts_accepted_at", "type": "timestamp without time zone"},
+          {"name": "ts_booking_at", "type": "timestamp without time zone"},
+          {"name": "ts_contact_at", "type": "timestamp without time zone"},
+          {"name": "ts_reply_at", "type": "timestamp without time zone"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 2172,
+      "slug": "2172-customers-with-large-orders",
+      "title": "Customers with Large Orders",
+      "difficulty": 2,
+      "category": "Subquery/CTE",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/2172-customers-with-large-orders?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/2172-customers-with-large-orders?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/2172-customers-with-large-orders?code_type=6"
+      },
+      "tables": ["online_store_customers", "online_store_orders"],
+      "question": "-- The marketing team wants to identify high-value customers for a premium loyalty program. Find all customers who have placed at least one order over $100. Return `customer ID` and `name`.",
+      "schema_sql": {
+        "online_store_customers": [
+          {"name": "customer_id", "type": "bigint"},
+          {"name": "customer_name", "type": "text"}
+        ],
+        "online_store_orders": [
+          {"name": "amount", "type": "double precision"},
+          {"name": "customer_id", "type": "bigint"},
+          {"name": "order_id", "type": "bigint"},
+          {"name": "status", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    }
+  ],
+  "selection_meta": {
+    "pool_sizes_freemium": {"easy": 29, "medium": 33, "hard": 0},
+    "excluded_recent_attempts": [2110, 9842, 10322],
+    "excluded_recent_sets": [9805, 9892, 9894, 10285, 9897, 10085, 2170],
+    "category_balance_check": "5 unique categories: Date/Time, String/Text, Join (self-join), Window Functions, Subquery/CTE",
+    "generated_at": "2026-05-30T00:00:00+00:00",
+    "generated_by": "scheduled task"
+  }
+}

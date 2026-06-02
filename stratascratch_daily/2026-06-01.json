@@ -1,0 +1,400 @@
+{
+  "date": "2026-06-01",
+  "weekday": "Monday",
+  "difficulty_mix": {
+    "easy": 1,
+    "medium": 3,
+    "hard": 1,
+    "rule": "Monday: 1 Easy + 3 Medium + 1 Hard"
+  },
+  "languages": [
+    "sql (PostgreSQL)",
+    "python (pandas)",
+    "pyspark"
+  ],
+  "questions": [
+    {
+      "id": 9937,
+      "slug": "9937-find-all-athletes-who-were-older-than-40-years-when-they-won-either-bronze-or-silver-medals",
+      "title": "Find all athletes who were older than 40 years when they won either Bronze or Silver medals",
+      "difficulty": 1,
+      "category": "Filter/Basic",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9937-find-all-athletes-who-were-older-than-40-years-when-they-won-either-bronze-or-silver-medals?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9937-find-all-athletes-who-were-older-than-40-years-when-they-won-either-bronze-or-silver-medals?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9937-find-all-athletes-who-were-older-than-40-years-when-they-won-either-bronze-or-silver-medals?code_type=6"
+      },
+      "tables": [
+        "olympics_athletes_events"
+      ],
+      "question": "Find all athletes who were older than 40 years when they won either Bronze or Silver medals.",
+      "schema_sql": {
+        "olympics_athletes_events": [
+          {
+            "name": "age",
+            "type": "double precision"
+          },
+          {
+            "name": "city",
+            "type": "text"
+          },
+          {
+            "name": "event",
+            "type": "text"
+          },
+          {
+            "name": "games",
+            "type": "text"
+          },
+          {
+            "name": "height",
+            "type": "double precision"
+          },
+          {
+            "name": "id",
+            "type": "bigint"
+          },
+          {
+            "name": "medal",
+            "type": "text"
+          },
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "noc",
+            "type": "text"
+          },
+          {
+            "name": "season",
+            "type": "text"
+          },
+          {
+            "name": "sex",
+            "type": "text"
+          },
+          {
+            "name": "sport",
+            "type": "text"
+          },
+          {
+            "name": "team",
+            "type": "text"
+          },
+          {
+            "name": "weight",
+            "type": "double precision"
+          },
+          {
+            "name": "year",
+            "type": "bigint"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 10352,
+      "slug": "10352-users-by-avg-session-time",
+      "title": "Users By Average Session Time",
+      "difficulty": 2,
+      "category": "Date/Time",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10352-users-by-avg-session-time?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10352-users-by-avg-session-time?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10352-users-by-avg-session-time?code_type=6"
+      },
+      "tables": [
+        "facebook_web_log"
+      ],
+      "question": "Calculate each user's average session time, where a session is defined as the time difference between a `page_load` and a `page_exit`. Assume each user has only one session per day. If there are multiple `page_load` or `page_exit` events on the same day, use only the latest `page_load` and the earliest `page_exit`. Only consider sessions where the `page_load` occurs before the `page_exit` on the same day. Output the `user_id` and their average session time.",
+      "schema_sql": {
+        "facebook_web_log": [
+          {
+            "name": "action",
+            "type": "text"
+          },
+          {
+            "name": "timestamp",
+            "type": "timestamp without time zone"
+          },
+          {
+            "name": "user_id",
+            "type": "bigint"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 10077,
+      "slug": "10077-income-by-title-and-gender",
+      "title": "Income By Title and Gender",
+      "difficulty": 2,
+      "category": "Join (multi-table)",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10077-income-by-title-and-gender?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10077-income-by-title-and-gender?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10077-income-by-title-and-gender?code_type=6"
+      },
+      "tables": [
+        "sf_employee",
+        "sf_bonus"
+      ],
+      "question": "Find the average total compensation based on employee titles and gender. Total compensation is calculated by adding both the salary and bonus of each employee. However, not every employee receives a bonus so disregard employees without bonuses in your calculation. Employee can receive more than one bonus. Output the employee title, gender (i.e., sex), along with the average total compensation.",
+      "schema_sql": {
+        "sf_employee": [
+          {
+            "name": "address",
+            "type": "text"
+          },
+          {
+            "name": "age",
+            "type": "bigint"
+          },
+          {
+            "name": "city",
+            "type": "text"
+          },
+          {
+            "name": "department",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "text"
+          },
+          {
+            "name": "employee_title",
+            "type": "text"
+          },
+          {
+            "name": "first_name",
+            "type": "text"
+          },
+          {
+            "name": "id",
+            "type": "bigint"
+          },
+          {
+            "name": "last_name",
+            "type": "text"
+          },
+          {
+            "name": "manager_id",
+            "type": "bigint"
+          },
+          {
+            "name": "salary",
+            "type": "bigint"
+          },
+          {
+            "name": "sex",
+            "type": "text"
+          },
+          {
+            "name": "target",
+            "type": "bigint"
+          }
+        ],
+        "sf_bonus": [
+          {
+            "name": "bonus",
+            "type": "bigint"
+          },
+          {
+            "name": "worker_ref_id",
+            "type": "bigint"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 10049,
+      "slug": "10049-reviews-of-categories",
+      "title": "Reviews of Categories",
+      "difficulty": 2,
+      "category": "Aggregation",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10049-reviews-of-categories?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10049-reviews-of-categories?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10049-reviews-of-categories?code_type=6"
+      },
+      "tables": [
+        "yelp_business"
+      ],
+      "question": "Calculate number of reviews for every business category. Output the category along with the total number of reviews. Order by total reviews in descending order. (Note: the `categories` column holds comma-separated category values that must be split before aggregating.)",
+      "schema_sql": {
+        "yelp_business": [
+          {
+            "name": "address",
+            "type": "text"
+          },
+          {
+            "name": "business_id",
+            "type": "text"
+          },
+          {
+            "name": "categories",
+            "type": "text"
+          },
+          {
+            "name": "city",
+            "type": "text"
+          },
+          {
+            "name": "is_open",
+            "type": "bigint"
+          },
+          {
+            "name": "latitude",
+            "type": "double precision"
+          },
+          {
+            "name": "longitude",
+            "type": "double precision"
+          },
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "neighborhood",
+            "type": "text"
+          },
+          {
+            "name": "postal_code",
+            "type": "text"
+          },
+          {
+            "name": "review_count",
+            "type": "bigint"
+          },
+          {
+            "name": "stars",
+            "type": "double precision"
+          },
+          {
+            "name": "state",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 9814,
+      "slug": "9814-counting-instances-in-text",
+      "title": "Counting Instances in Text",
+      "difficulty": 3,
+      "category": "String/Text",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9814-counting-instances-in-text?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9814-counting-instances-in-text?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9814-counting-instances-in-text?code_type=6"
+      },
+      "tables": [
+        "google_file_store"
+      ],
+      "question": "Find the number of times the exact words `bull` and `bear` appear in the `contents` column. Count all occurrences, even if they appear multiple times within the same row. Matches should be case-insensitive and only count exact words, that is, exclude substrings like `bullish` or `bearing`. Output the word (`bull` or `bear`) and the corresponding number of occurrences.",
+      "schema_sql": {
+        "google_file_store": [
+          {
+            "name": "contents",
+            "type": "text"
+          },
+          {
+            "name": "filename",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    }
+  ],
+  "selection_meta": {
+    "pool_sizes_freemium": {
+      "easy": 29,
+      "medium": 33,
+      "hard": 5
+    },
+    "excluded_recent_attempts": [
+      2110,
+      9842,
+      9894,
+      10322
+    ],
+    "also_avoided_recent_daily_selections": [
+      9805,
+      9892,
+      9894,
+      2110,
+      10285,
+      9842,
+      10322,
+      9897,
+      10085,
+      2170,
+      10005,
+      9817,
+      9856,
+      10159,
+      2172,
+      2056,
+      10048,
+      10078,
+      9881,
+      10304
+    ],
+    "category_balance_check": "5 unique categories: Filter/Basic (9937), Date/Time (10352), Join (multi-table) (10077), Aggregation (10049), String/Text (9814)",
+    "generated_at": "2026-06-01T00:13:23.873096+00:00",
+    "generated_by": "scheduled task"
+  }
+}

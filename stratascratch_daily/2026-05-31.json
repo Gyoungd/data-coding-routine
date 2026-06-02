@@ -1,0 +1,170 @@
+{
+  "date": "2026-05-31",
+  "weekday": "Sunday",
+  "difficulty_mix": {
+    "easy": 1,
+    "medium": 4,
+    "hard": 0,
+    "rule": "Non-Monday: 1 Easy + 4 Medium"
+  },
+  "languages": ["sql (PostgreSQL)", "python (pandas)", "pyspark"],
+  "questions": [
+    {
+      "id": 2056,
+      "slug": "2056-number-of-shipments-per-month",
+      "title": "Number of Shipments Per Month",
+      "difficulty": 1,
+      "category": "Date/Time",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/2056-number-of-shipments-per-month?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/2056-number-of-shipments-per-month?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/2056-number-of-shipments-per-month?code_type=6"
+      },
+      "tables": ["amazon_shipment"],
+      "question": "Write a query that will calculate the number of shipments per month. The unique key for one shipment is a combination of `shipment_id` and `sub_id`. Output the `year_month` in format `YYYY-MM` and the number of shipments in that month.",
+      "schema_sql": {
+        "amazon_shipment": [
+          {"name": "shipment_date", "type": "date"},
+          {"name": "shipment_id", "type": "bigint"},
+          {"name": "sub_id", "type": "bigint"},
+          {"name": "weight", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 10048,
+      "slug": "10048-top-businesses-with-most-reviews",
+      "title": "Top Businesses With Most Reviews",
+      "difficulty": 2,
+      "category": "Window Functions",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10048-top-businesses-with-most-reviews?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10048-top-businesses-with-most-reviews?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10048-top-businesses-with-most-reviews?code_type=6"
+      },
+      "tables": ["yelp_business"],
+      "question": "Find the top 5 businesses with most reviews. Assume that each row has a unique business_id such that the total reviews for each business is listed on each row. Output the business name along with the total number of reviews and order your results by the total reviews in descending order. If there are ties in review counts, businesses with the same number of reviews receive the same rank, and subsequent ranks are skipped accordingly (e.g., if two businesses tie for rank 4, the next business receives rank 6, skipping rank 5).",
+      "schema_sql": {
+        "yelp_business": [
+          {"name": "address", "type": "text"},
+          {"name": "business_id", "type": "text"},
+          {"name": "categories", "type": "text"},
+          {"name": "city", "type": "text"},
+          {"name": "is_open", "type": "bigint"},
+          {"name": "latitude", "type": "double precision"},
+          {"name": "longitude", "type": "double precision"},
+          {"name": "name", "type": "text"},
+          {"name": "neighborhood", "type": "text"},
+          {"name": "postal_code", "type": "text"},
+          {"name": "review_count", "type": "bigint"},
+          {"name": "stars", "type": "double precision"},
+          {"name": "state", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 10078,
+      "slug": "10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality",
+      "title": "Matching Similar Hosts and Guests",
+      "difficulty": 2,
+      "category": "Join (multi-table)",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality?code_type=6"
+      },
+      "tables": ["airbnb_hosts", "airbnb_guests"],
+      "question": "Find matching hosts and guests pairs in a way that they are both of the same gender and nationality. Output the host id and the guest id of matched pair.",
+      "schema_sql": {
+        "airbnb_hosts": [
+          {"name": "age", "type": "bigint"},
+          {"name": "gender", "type": "text"},
+          {"name": "host_id", "type": "bigint"},
+          {"name": "nationality", "type": "text"}
+        ],
+        "airbnb_guests": [
+          {"name": "age", "type": "bigint"},
+          {"name": "gender", "type": "text"},
+          {"name": "guest_id", "type": "bigint"},
+          {"name": "nationality", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 9881,
+      "slug": "9881-make-a-report-showing-the-number-of-survivors-and-non-survivors-by-passenger-class",
+      "title": "Titanic Survivors and Non-Survivors",
+      "difficulty": 2,
+      "category": "Aggregation",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9881-make-a-report-showing-the-number-of-survivors-and-non-survivors-by-passenger-class?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9881-make-a-report-showing-the-number-of-survivors-and-non-survivors-by-passenger-class?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9881-make-a-report-showing-the-number-of-survivors-and-non-survivors-by-passenger-class?code_type=6"
+      },
+      "tables": ["titanic"],
+      "question": "Make a report showing the number of survivors and non-survivors by passenger class. Classes are categorized based on the `pclass` value as: First class: pclass = 1; Second class: pclass = 2; Third class: pclass = 3. Output the number of survivors and non-survivors by each class.",
+      "schema_sql": {
+        "titanic": [
+          {"name": "age", "type": "double precision"},
+          {"name": "cabin", "type": "text"},
+          {"name": "embarked", "type": "text"},
+          {"name": "fare", "type": "double precision"},
+          {"name": "name", "type": "text"},
+          {"name": "parch", "type": "bigint"},
+          {"name": "passengerid", "type": "bigint"},
+          {"name": "pclass", "type": "bigint"},
+          {"name": "sex", "type": "text"},
+          {"name": "sibsp", "type": "bigint"},
+          {"name": "survived", "type": "bigint"},
+          {"name": "ticket", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 10304,
+      "slug": "10304-risky-projects",
+      "title": "Risky Projects",
+      "difficulty": 2,
+      "category": "Subquery/CTE",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10304-risky-projects?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10304-risky-projects?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10304-risky-projects?code_type=6"
+      },
+      "tables": ["linkedin_projects", "linkedin_emp_projects", "linkedin_employees"],
+      "question": "You are given a set of projects and employee data. Each project has a name, a budget, and a specific duration, while each employee has an annual salary and may be assigned to one or more projects for particular periods. The task is to identify which projects are overbudget. A project is considered overbudget if the prorated cost of all employees assigned to it exceeds the project's budget. To solve this, you must prorate each employee's annual salary based on the exact period they work on a given project, relative to a full year. For example, if an employee works on a six-month project, only half of their annual salary should be attributed to that project. Sum these prorated salary amounts for all employees assigned to a project and compare the total with the project's budget. Your output should be a list of overbudget projects, where each entry includes the project's name, its budget, and the total prorated employee expenses for that project. The total expenses should be rounded up to the nearest dollar. Assume all years have 365 days and disregard leap years.",
+      "schema_sql": {
+        "linkedin_projects": [
+          {"name": "budget", "type": "bigint"},
+          {"name": "end_date", "type": "date"},
+          {"name": "id", "type": "bigint"},
+          {"name": "start_date", "type": "date"},
+          {"name": "title", "type": "text"}
+        ],
+        "linkedin_emp_projects": [
+          {"name": "emp_id", "type": "bigint"},
+          {"name": "project_id", "type": "bigint"}
+        ],
+        "linkedin_employees": [
+          {"name": "first_name", "type": "text"},
+          {"name": "id", "type": "bigint"},
+          {"name": "last_name", "type": "text"},
+          {"name": "salary", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    }
+  ],
+  "selection_meta": {
+    "pool_sizes_freemium": {"easy": 29, "medium": 33, "hard": 0},
+    "excluded_recent_attempts": [9894, 10322, 9842, 2110, 10005, 9817, 9856, 10159, 2172, 9805, 10285, 9897, 2170, 10085, 9892],
+    "category_balance_check": "5 unique categories: Date/Time (2056), Window Functions (10048), Join (10078), Aggregation (9881), Subquery/CTE (10304)",
+    "generated_at": "2026-05-31T00:00:00+00:00",
+    "generated_by": "scheduled task",
+    "notes": "Hard pool not queried (Sunday mix has 0 Hard). Exclusion set combines question_ids from the last 100 educational attempts (2026-05-27 to 2026-05-30) and the daily sets for 2026-05-27 through 2026-05-30. Categories assigned by keyword heuristic per _category_rules.md."
+  }
+}

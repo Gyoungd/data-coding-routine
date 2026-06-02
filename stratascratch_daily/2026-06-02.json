@@ -1,0 +1,378 @@
+{
+  "date": "2026-06-02",
+  "weekday": "Tuesday",
+  "difficulty_mix": {
+    "easy": 1,
+    "medium": 4,
+    "hard": 0,
+    "rule": "Non-Monday: 1 Easy + 4 Medium"
+  },
+  "languages": [
+    "sql (PostgreSQL)",
+    "python (pandas)",
+    "pyspark"
+  ],
+  "questions": [
+    {
+      "id": 2024,
+      "slug": "2024-unique-users-per-client-per-month",
+      "title": "Unique Users Per Client Per Month",
+      "difficulty": 1,
+      "category": "Date/Time",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/2024-unique-users-per-client-per-month?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/2024-unique-users-per-client-per-month?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/2024-unique-users-per-client-per-month?code_type=6"
+      },
+      "tables": [
+        "fact_events"
+      ],
+      "question": "-- Write a query that returns the number of unique users per client for each month. Assume all events occur within the same year, so only month needs to be be in the output as a number from 1 to 12.",
+      "schema_sql": {
+        "fact_events": [
+          {
+            "name": "client_id",
+            "type": "text"
+          },
+          {
+            "name": "customer_id",
+            "type": "text"
+          },
+          {
+            "name": "event_id",
+            "type": "bigint"
+          },
+          {
+            "name": "event_type",
+            "type": "text"
+          },
+          {
+            "name": "id",
+            "type": "bigint"
+          },
+          {
+            "name": "time_id",
+            "type": "date"
+          },
+          {
+            "name": "user_id",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 10553,
+      "slug": "10553-finding-purchases",
+      "title": "Finding Purchases",
+      "difficulty": 2,
+      "category": "Window Functions",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10553-finding-purchases?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10553-finding-purchases?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10553-finding-purchases?code_type=6"
+      },
+      "tables": [
+        "amazon_transactions"
+      ],
+      "question": "Identify returning active users by finding users who made a repeat purchase within 7 days or less of their previous transaction, excluding same-day purchases. Output a list of these `user_id`.",
+      "schema_sql": {
+        "amazon_transactions": [
+          {
+            "name": "created_at",
+            "type": "date"
+          },
+          {
+            "name": "id",
+            "type": "bigint"
+          },
+          {
+            "name": "item",
+            "type": "text"
+          },
+          {
+            "name": "revenue",
+            "type": "bigint"
+          },
+          {
+            "name": "user_id",
+            "type": "bigint"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 9905,
+      "slug": "9905-highest-target-under-manager",
+      "title": "Highest Target Under Manager",
+      "difficulty": 2,
+      "category": "Subquery/CTE",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9905-highest-target-under-manager?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9905-highest-target-under-manager?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9905-highest-target-under-manager?code_type=6"
+      },
+      "tables": [
+        "salesforce_employees"
+      ],
+      "question": "-- Identify the employee(s) working under manager `manager_id=13` who have achieved the highest target. Return each such employee’s first name alongside the target value. The goal is to display the maximum target among all employees under `manager_id=13` and show which employee(s) reached that top value.",
+      "schema_sql": {
+        "salesforce_employees": [
+          {
+            "name": "address",
+            "type": "text"
+          },
+          {
+            "name": "age",
+            "type": "bigint"
+          },
+          {
+            "name": "bonus",
+            "type": "bigint"
+          },
+          {
+            "name": "city",
+            "type": "text"
+          },
+          {
+            "name": "department",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "text"
+          },
+          {
+            "name": "employee_title",
+            "type": "text"
+          },
+          {
+            "name": "first_name",
+            "type": "text"
+          },
+          {
+            "name": "id",
+            "type": "bigint"
+          },
+          {
+            "name": "last_name",
+            "type": "text"
+          },
+          {
+            "name": "manager_id",
+            "type": "bigint"
+          },
+          {
+            "name": "salary",
+            "type": "bigint"
+          },
+          {
+            "name": "sex",
+            "type": "text"
+          },
+          {
+            "name": "target",
+            "type": "bigint"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 10156,
+      "slug": "10156-number-of-units-per-nationality",
+      "title": "Number Of Units Per Nationality",
+      "difficulty": 2,
+      "category": "Join (multi-table)",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10156-number-of-units-per-nationality?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10156-number-of-units-per-nationality?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10156-number-of-units-per-nationality?code_type=6"
+      },
+      "tables": [
+        "airbnb_hosts",
+        "airbnb_units"
+      ],
+      "question": "-- Write a query that returns how many different apartment-type units (counted by distinct `unit_id`) are owned by people under 30, grouped by their nationality. Sort the results by the number of apartments in descending order.",
+      "schema_sql": {
+        "airbnb_hosts": [
+          {
+            "name": "age",
+            "type": "bigint"
+          },
+          {
+            "name": "gender",
+            "type": "text"
+          },
+          {
+            "name": "host_id",
+            "type": "bigint"
+          },
+          {
+            "name": "nationality",
+            "type": "text"
+          }
+        ],
+        "airbnb_units": [
+          {
+            "name": "city",
+            "type": "text"
+          },
+          {
+            "name": "country",
+            "type": "text"
+          },
+          {
+            "name": "host_id",
+            "type": "bigint"
+          },
+          {
+            "name": "n_bedrooms",
+            "type": "bigint"
+          },
+          {
+            "name": "n_beds",
+            "type": "bigint"
+          },
+          {
+            "name": "unit_id",
+            "type": "text"
+          },
+          {
+            "name": "unit_type",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 2005,
+      "slug": "2005-share-of-active-users",
+      "title": "Share of Active Users",
+      "difficulty": 2,
+      "category": "Aggregation",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/2005-share-of-active-users?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/2005-share-of-active-users?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/2005-share-of-active-users?code_type=6"
+      },
+      "tables": [
+        "fb_active_users"
+      ],
+      "question": "-- Calculate the percentage of users who are both from the US and have an 'open' status, as indicated in the `fb_active_users` table.",
+      "schema_sql": {
+        "fb_active_users": [
+          {
+            "name": "country",
+            "type": "text"
+          },
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "status",
+            "type": "text"
+          },
+          {
+            "name": "user_id",
+            "type": "bigint"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    }
+  ],
+  "selection_meta": {
+    "pool_sizes_freemium": {
+      "easy": 29,
+      "medium": 33,
+      "hard": null
+    },
+    "excluded_recent_attempts": [
+      9805,
+      9892,
+      9894,
+      2110,
+      10285,
+      9842,
+      10322,
+      9897,
+      10085,
+      2170,
+      10005,
+      9817,
+      9856,
+      10159,
+      2172,
+      2056,
+      10048,
+      10078,
+      9881,
+      10304,
+      9937,
+      10352,
+      10077,
+      10049,
+      9814
+    ],
+    "category_balance_check": "5 unique categories: Date/Time, Window Functions, Subquery/CTE, Join (multi-table), Aggregation",
+    "generated_at": "2026-06-02T00:11:46.122744+00:00",
+    "generated_by": "scheduled task",
+    "notes": [
+      "Hard pool not fetched (Tuesday mix has no Hard slot), so pool_sizes_freemium.hard is null.",
+      "get_my_attempts(limit=100) only spanned 2026-05-27..2026-05-30 (question_ids 9894, 10322, 9842, 2110) because each question has many submissions; excluded_recent_attempts was therefore built from the last 6 daily set files (2026-05-27..2026-06-01) PLUS those attempt ids to robustly avoid repeats.",
+      "Category labels assigned by keyword heuristic per _category_rules.md.",
+      "10553 categorized as Window Functions: 7-day repeat-purchase vs previous transaction => LAG/window over user_id ordered by date.",
+      "9905 categorized as Subquery/CTE: target compared to MAX(target) among manager_id=13."
+    ]
+  }
+}
