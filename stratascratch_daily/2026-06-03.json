@@ -1,0 +1,166 @@
+{
+  "date": "2026-06-03",
+  "weekday": "Wednesday",
+  "difficulty_mix": {"easy": 1, "medium": 4, "hard": 0, "rule": "Non-Monday: 1 Easy + 4 Medium"},
+  "languages": ["sql (PostgreSQL)", "python (pandas)", "pyspark"],
+  "questions": [
+    {
+      "id": 10004,
+      "slug": "10004-find-all-lyft-rides-which-happened-on-rainy-days-before-noon",
+      "title": "Find all Lyft rides which happened on rainy days before noon",
+      "difficulty": 1,
+      "category": "Date/Time",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10004-find-all-lyft-rides-which-happened-on-rainy-days-before-noon?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10004-find-all-lyft-rides-which-happened-on-rainy-days-before-noon?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10004-find-all-lyft-rides-which-happened-on-rainy-days-before-noon?code_type=6"
+      },
+      "tables": ["lyft_rides"],
+      "question": "Find all Lyft rides which happened on rainy days before noon.",
+      "schema_sql": {
+        "lyft_rides": [
+          {"name": "gasoline_cost", "type": "double precision"},
+          {"name": "hour", "type": "bigint"},
+          {"name": "index", "type": "bigint"},
+          {"name": "travel_distance", "type": "double precision"},
+          {"name": "weather", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 10090,
+      "slug": "10090-find-the-percentage-of-shipable-orders",
+      "title": "Find the percentage of shipable orders",
+      "difficulty": 2,
+      "category": "Join (multi-table)",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10090-find-the-percentage-of-shipable-orders?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10090-find-the-percentage-of-shipable-orders?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10090-find-the-percentage-of-shipable-orders?code_type=6"
+      },
+      "tables": ["orders", "customers"],
+      "question": "Find the percentage of shipable orders. Consider an order is shipable if the customer's address is known.",
+      "schema_sql": {
+        "orders": [
+          {"name": "cust_id", "type": "bigint"},
+          {"name": "id", "type": "bigint"},
+          {"name": "order_date", "type": "date"},
+          {"name": "order_details", "type": "text"},
+          {"name": "total_order_cost", "type": "bigint"}
+        ],
+        "customers": [
+          {"name": "address", "type": "text"},
+          {"name": "city", "type": "text"},
+          {"name": "first_name", "type": "text"},
+          {"name": "id", "type": "bigint"},
+          {"name": "last_name", "type": "text"},
+          {"name": "phone_number", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 2102,
+      "slug": "2102-flags-per-video",
+      "title": "Flags per Video",
+      "difficulty": 2,
+      "category": "Aggregation",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/2102-flags-per-video?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/2102-flags-per-video?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/2102-flags-per-video?code_type=6"
+      },
+      "tables": ["user_flags"],
+      "question": "For each video, find how many unique users flagged it. A unique user can be identified using the combination of their first name and last name. Do not consider rows in which there is no flag ID.",
+      "schema_sql": {
+        "user_flags": [
+          {"name": "flag_id", "type": "text"},
+          {"name": "user_firstname", "type": "text"},
+          {"name": "user_lastname", "type": "text"},
+          {"name": "video_id", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 10025,
+      "slug": "10025-find-all-possible-varieties-which-occur-in-either-of-the-winemag-datasets",
+      "title": "Find all possible varieties which occur in either of the winemag datasets",
+      "difficulty": 2,
+      "category": "Subquery/CTE",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10025-find-all-possible-varieties-which-occur-in-either-of-the-winemag-datasets?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10025-find-all-possible-varieties-which-occur-in-either-of-the-winemag-datasets?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10025-find-all-possible-varieties-which-occur-in-either-of-the-winemag-datasets?code_type=6"
+      },
+      "tables": ["winemag_p1", "winemag_p2"],
+      "question": "Find all possible varieties which occur in either of the winemag datasets. Output unique variety values only. Sort records based on the variety in ascending order.",
+      "schema_sql": {
+        "winemag_p1": [
+          {"name": "country", "type": "text"},
+          {"name": "description", "type": "text"},
+          {"name": "designation", "type": "text"},
+          {"name": "id", "type": "bigint"},
+          {"name": "points", "type": "bigint"},
+          {"name": "price", "type": "double precision"},
+          {"name": "province", "type": "text"},
+          {"name": "region_1", "type": "text"},
+          {"name": "region_2", "type": "text"},
+          {"name": "variety", "type": "text"},
+          {"name": "winery", "type": "text"}
+        ],
+        "winemag_p2": [
+          {"name": "country", "type": "text"},
+          {"name": "description", "type": "text"},
+          {"name": "designation", "type": "text"},
+          {"name": "id", "type": "bigint"},
+          {"name": "points", "type": "bigint"},
+          {"name": "price", "type": "double precision"},
+          {"name": "province", "type": "text"},
+          {"name": "region_1", "type": "text"},
+          {"name": "region_2", "type": "text"},
+          {"name": "taster_name", "type": "text"},
+          {"name": "taster_twitter_handle", "type": "text"},
+          {"name": "title", "type": "text"},
+          {"name": "variety", "type": "text"},
+          {"name": "winery", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 9650,
+      "slug": "9650-find-the-top-10-ranked-songs-in-2010",
+      "title": "Top 10 Songs 2010",
+      "difficulty": 2,
+      "category": "Window Functions",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9650-find-the-top-10-ranked-songs-in-2010?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9650-find-the-top-10-ranked-songs-in-2010?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9650-find-the-top-10-ranked-songs-in-2010?code_type=6"
+      },
+      "tables": ["billboard_top_100_year_end"],
+      "question": "Find the top 10 ranked songs in 2010. Output the rank, group name, and song name, but do not show the same song twice. Sort the result based on the rank in ascending order.",
+      "schema_sql": {
+        "billboard_top_100_year_end": [
+          {"name": "artist", "type": "text"},
+          {"name": "group_name", "type": "text"},
+          {"name": "id", "type": "bigint"},
+          {"name": "song_name", "type": "text"},
+          {"name": "year", "type": "bigint"},
+          {"name": "year_rank", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    }
+  ],
+  "selection_meta": {
+    "pool_sizes_freemium": {"easy": 29, "medium": 33, "hard": 0},
+    "excluded_recent_attempts": [9805, 9892, 9894, 2110, 10285, 9842, 10322, 9897, 10085, 2170, 10005, 9817, 9856, 10159, 2172, 2056, 10048, 10078, 9881, 10304, 9937, 10352, 10077, 10049, 9814, 2024, 10553, 9905, 10156, 2005],
+    "category_balance_check": "5 unique categories: Date/Time (10004), Join multi-table (10090), Aggregation (2102), Subquery/CTE (10025), Window Functions (9650)",
+    "generated_at": "2026-06-03T00:15:00+00:00",
+    "generated_by": "scheduled task",
+    "notes": "Hard pool not queried (non-Monday, no Hard required). excluded_recent_attempts compiled from the last 7 daily JSON assignments (2026-05-27 through 2026-06-02) plus question_ids found in get_my_attempts (last 100 attempts: 10553, 2024, 9894, 10322). Category classification is keyword heuristic; 9650 mapped to Window Functions on the 'rank' cue though it may be solvable with a plain filter/DISTINCT."
+  }
+}
