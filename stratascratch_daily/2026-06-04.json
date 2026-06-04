@@ -1,0 +1,134 @@
+{
+  "date": "2026-06-04",
+  "weekday": "Thursday",
+  "difficulty_mix": {
+    "easy": 1,
+    "medium": 4,
+    "hard": 0,
+    "rule": "Non-Monday: 1 Easy + 4 Medium"
+  },
+  "languages": ["sql (PostgreSQL)", "python (pandas)", "pyspark"],
+  "questions": [
+    {
+      "id": 9845,
+      "slug": "9845-find-the-number-of-employees-working-in-the-admin-department",
+      "title": "April Admin Employees",
+      "difficulty": 1,
+      "category": "Date/Time",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9845-find-the-number-of-employees-working-in-the-admin-department?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9845-find-the-number-of-employees-working-in-the-admin-department?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9845-find-the-number-of-employees-working-in-the-admin-department?code_type=6"
+      },
+      "tables": ["worker"],
+      "question": "Find the number of employees working in the Admin department that joined in April or later, in any year.",
+      "schema_sql": {
+        "worker": [
+          {"name": "department", "type": "text"},
+          {"name": "first_name", "type": "text"},
+          {"name": "joining_date", "type": "date"},
+          {"name": "last_name", "type": "text"},
+          {"name": "salary", "type": "bigint"},
+          {"name": "worker_id", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 2101,
+      "slug": "2101-maximum-of-two-numbers",
+      "title": "Maximum of Two Numbers",
+      "difficulty": 2,
+      "category": "Join (multi-table)",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/2101-maximum-of-two-numbers?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/2101-maximum-of-two-numbers?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/2101-maximum-of-two-numbers?code_type=6"
+      },
+      "tables": ["deloitte_numbers"],
+      "question": "Given a single column of numbers, consider all possible permutations of two numbers with replacement, assuming that pairs of numbers (x,y) and (y,x) are two different permutations. Then, for each permutation, find the maximum of the two numbers. Output three columns: the first number, the second number and the maximum of the two.",
+      "schema_sql": {
+        "deloitte_numbers": [
+          {"name": "number", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 9781,
+      "slug": "9781-find-the-rate-of-processed-tickets-for-each-type",
+      "title": "Processed Ticket Rate By Type",
+      "difficulty": 2,
+      "category": "Aggregation",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9781-find-the-rate-of-processed-tickets-for-each-type?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9781-find-the-rate-of-processed-tickets-for-each-type?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9781-find-the-rate-of-processed-tickets-for-each-type?code_type=6"
+      },
+      "tables": ["facebook_complaints"],
+      "question": "Find the processed rate of tickets for each `type`. The processed rate is defined as the number of processed tickets divided by the total number of tickets for that type. Round this result to two decimal places.",
+      "schema_sql": {
+        "facebook_complaints": [
+          {"name": "complaint_id", "type": "bigint"},
+          {"name": "processed", "type": "boolean"},
+          {"name": "type", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 9813,
+      "slug": "9813-make-the-friends-network-symmetric",
+      "title": "Make the friends network symmetric",
+      "difficulty": 2,
+      "category": "Subquery/CTE",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9813-make-the-friends-network-symmetric?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9813-make-the-friends-network-symmetric?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9813-make-the-friends-network-symmetric?code_type=6"
+      },
+      "tables": ["google_friends_network"],
+      "question": "Make the friends network symmetric. For example, if 0 and 1 are friends, have the output contain both 0 and 1 under 1 and 0 respectively.",
+      "schema_sql": {
+        "google_friends_network": [
+          {"name": "friend_id", "type": "bigint"},
+          {"name": "user_id", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 9858,
+      "slug": "9858-find-employees-in-the-hr-department-and-output-the-result-with-one-duplicate",
+      "title": "Duplicate HR Department Employees",
+      "difficulty": 2,
+      "category": "Filter/Basic",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9858-find-employees-in-the-hr-department-and-output-the-result-with-one-duplicate?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9858-find-employees-in-the-hr-department-and-output-the-result-with-one-duplicate?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9858-find-employees-in-the-hr-department-and-output-the-result-with-one-duplicate?code_type=6"
+      },
+      "tables": ["worker"],
+      "question": "Generate a list of employees who work in the HR department, including only their first names and department in the output. Each employee should appear twice in the list, meaning their first name and department should be duplicated in the output.",
+      "schema_sql": {
+        "worker": [
+          {"name": "department", "type": "text"},
+          {"name": "first_name", "type": "text"},
+          {"name": "joining_date", "type": "date"},
+          {"name": "last_name", "type": "text"},
+          {"name": "salary", "type": "bigint"},
+          {"name": "worker_id", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    }
+  ],
+  "selection_meta": {
+    "pool_sizes_freemium": {"easy": 22, "medium": 6, "hard": 0},
+    "excluded_recent_attempts": [10090, 10004, 10553, 2024, 9805, 9892, 9894, 2110, 10285, 9842, 10322, 9897, 10085, 2170, 10005, 9817, 9856, 10159, 2172, 2056, 10048, 10078, 9881, 10304, 9937, 10352, 10077, 10049, 9814, 9905, 10156, 2005, 2102, 10025, 9650],
+    "category_balance_check": "5 unique categories: Date/Time (9845), Join multi-table (2101), Aggregation (9781), Subquery/CTE (9813), Filter/Basic (9858)",
+    "generated_at": "2026-06-04T00:00:00+00:00",
+    "generated_by": "scheduled task",
+    "notes": "Exclusion set combines the last 100 educational attempts (only spanned Jun 2-3, IDs 10090/10004/10553/2024) with all question IDs assigned in the prior 8 daily set files (May 27 - Jun 3), since attempts API caps at 100 rows. After exclusion, only 6 medium questions remained in the freemium pool; 4 were selected to maximize category diversity. Categories assigned via keyword heuristic. Hard not required (non-Monday)."
+  }
+}
