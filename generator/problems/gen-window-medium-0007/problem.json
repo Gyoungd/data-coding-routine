@@ -1,0 +1,61 @@
+{
+  "problem_id": "gen-window-medium-0007",
+  "category": "Window Functions",
+  "category_key": "window",
+  "difficulty": "medium",
+  "seed": 7,
+  "title": "Highest Salary in Each Department",
+  "question": "From the `employee` table, find the highest-paid employee in each department. Output department, first_name and salary. If several employees tie for the top salary in a department, return all of them.",
+  "tables": [
+    "employee"
+  ],
+  "schema_sql": {
+    "employee": [
+      {
+        "name": "id",
+        "type": "bigint"
+      },
+      {
+        "name": "first_name",
+        "type": "text"
+      },
+      {
+        "name": "department",
+        "type": "text"
+      },
+      {
+        "name": "salary",
+        "type": "bigint"
+      }
+    ]
+  },
+  "order_sensitive": false,
+  "reference_sql": "WITH ranked AS ( SELECT department, first_name, salary, RANK() OVER (PARTITION BY department ORDER BY salary DESC) AS rnk FROM employee ) SELECT department, first_name, salary FROM ranked WHERE rnk = 1",
+  "expected_columns": [
+    "department",
+    "first_name",
+    "salary"
+  ],
+  "expected_rows": [
+    [
+      "Engineering",
+      "Yuki",
+      150500
+    ],
+    [
+      "Sales",
+      "Sarah",
+      108500
+    ],
+    [
+      "HR",
+      "Elena",
+      144000
+    ],
+    [
+      "Marketing",
+      "Eric",
+      98500
+    ]
+  ]
+}

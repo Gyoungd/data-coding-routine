@@ -1,0 +1,199 @@
+{
+  "date": "2026-06-05",
+  "weekday": "Friday",
+  "difficulty_mix": {"easy": 1, "medium": 4, "hard": 0, "rule": "Non-Monday: 1 Easy + 4 Medium"},
+  "languages": ["sql (PostgreSQL)", "python (pandas)", "pyspark"],
+  "questions": [
+    {
+      "id": 9688,
+      "slug": "9688-churro-activity-date",
+      "title": "Churro Activity Date",
+      "difficulty": 1,
+      "category": "Filter/Basic",
+      "is_repeat": false,
+      "repeat_reason": null,
+      "last_queued": null,
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9688-churro-activity-date?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9688-churro-activity-date?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9688-churro-activity-date?code_type=6"
+      },
+      "tables": ["los_angeles_restaurant_health_inspections"],
+      "question": "--  Find the inspection date and risk category (`pe_description`) of facilities named 'STREET CHURROS' that received a score below 95.",
+      "schema_sql": {
+        "los_angeles_restaurant_health_inspections": [
+          {"name": "activity_date", "type": "date"},
+          {"name": "employee_id", "type": "text"},
+          {"name": "facility_address", "type": "text"},
+          {"name": "facility_city", "type": "text"},
+          {"name": "facility_id", "type": "text"},
+          {"name": "facility_name", "type": "text"},
+          {"name": "facility_state", "type": "text"},
+          {"name": "facility_zip", "type": "text"},
+          {"name": "grade", "type": "text"},
+          {"name": "owner_id", "type": "text"},
+          {"name": "owner_name", "type": "text"},
+          {"name": "pe_description", "type": "text"},
+          {"name": "program_element_pe", "type": "bigint"},
+          {"name": "program_name", "type": "text"},
+          {"name": "program_status", "type": "text"},
+          {"name": "record_id", "type": "text"},
+          {"name": "score", "type": "bigint"},
+          {"name": "serial_number", "type": "text"},
+          {"name": "service_code", "type": "bigint"},
+          {"name": "service_description", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 10060,
+      "slug": "10060-top-cool-votes",
+      "title": "Top Cool Votes",
+      "difficulty": 2,
+      "category": "Aggregation",
+      "is_repeat": false,
+      "repeat_reason": null,
+      "last_queued": null,
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10060-top-cool-votes?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10060-top-cool-votes?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10060-top-cool-votes?code_type=6"
+      },
+      "tables": ["yelp_reviews"],
+      "question": "-- Find the `review_text` that received the highest number of  `cool` votes.\r\n-- Output the business name along with the review text with the highest number of `cool` votes.",
+      "schema_sql": {
+        "yelp_reviews": [
+          {"name": "business_name", "type": "text"},
+          {"name": "cool", "type": "bigint"},
+          {"name": "funny", "type": "bigint"},
+          {"name": "review_date", "type": "date"},
+          {"name": "review_id", "type": "text"},
+          {"name": "review_text", "type": "text"},
+          {"name": "stars", "type": "text"},
+          {"name": "useful", "type": "bigint"},
+          {"name": "user_id", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 10130,
+      "slug": "10130-find-the-number-of-inspections-for-each-risk-category-by-inspection-type",
+      "title": "Number of Inspections per Risk Category by Inspection Type",
+      "difficulty": 2,
+      "category": "Aggregation (pivot)",
+      "is_repeat": false,
+      "repeat_reason": null,
+      "last_queued": null,
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10130-find-the-number-of-inspections-for-each-risk-category-by-inspection-type?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10130-find-the-number-of-inspections-for-each-risk-category-by-inspection-type?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10130-find-the-number-of-inspections-for-each-risk-category-by-inspection-type?code_type=6"
+      },
+      "tables": ["sf_restaurant_health_violations"],
+      "question": "-- Find the number of inspections that resulted in each risk category per each inspection type.\r\n-- Consider the records with no risk category value belongs to a separate category.\r\n-- Output the result along with the corresponding inspection type and the corresponding total number of inspections per that type. The output should be pivoted, meaning that each risk category + total number should be a separate column.\r\n-- Order the result based on the number of inspections per inspection type in descending order.",
+      "schema_sql": {
+        "sf_restaurant_health_violations": [
+          {"name": "business_address", "type": "text"},
+          {"name": "business_city", "type": "text"},
+          {"name": "business_id", "type": "bigint"},
+          {"name": "business_latitude", "type": "double precision"},
+          {"name": "business_location", "type": "text"},
+          {"name": "business_longitude", "type": "double precision"},
+          {"name": "business_name", "type": "text"},
+          {"name": "business_phone_number", "type": "double precision"},
+          {"name": "business_postal_code", "type": "double precision"},
+          {"name": "business_state", "type": "text"},
+          {"name": "inspection_date", "type": "date"},
+          {"name": "inspection_id", "type": "text"},
+          {"name": "inspection_score", "type": "double precision"},
+          {"name": "inspection_type", "type": "text"},
+          {"name": "risk_category", "type": "text"},
+          {"name": "violation_description", "type": "text"},
+          {"name": "violation_id", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 9897,
+      "slug": "9897-highest-salary-in-department",
+      "title": "Highest Salary In Department",
+      "difficulty": 2,
+      "category": "Window Functions",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-05-29",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9897-highest-salary-in-department?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9897-highest-salary-in-department?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9897-highest-salary-in-department?code_type=6"
+      },
+      "tables": ["employee"],
+      "question": "-- Find the employee with the highest salary per department.\r\n-- Output the department name, employee's first name along with the corresponding salary.",
+      "schema_sql": {
+        "employee": [
+          {"name": "address", "type": "text"},
+          {"name": "age", "type": "bigint"},
+          {"name": "bonus", "type": "bigint"},
+          {"name": "city", "type": "text"},
+          {"name": "department", "type": "text"},
+          {"name": "email", "type": "text"},
+          {"name": "employee_title", "type": "text"},
+          {"name": "first_name", "type": "text"},
+          {"name": "id", "type": "bigint"},
+          {"name": "last_name", "type": "text"},
+          {"name": "manager_id", "type": "bigint"},
+          {"name": "salary", "type": "bigint"},
+          {"name": "sex", "type": "text"},
+          {"name": "target", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 2170,
+      "slug": "2170-department-workforce-analysis",
+      "title": "Department Workforce Analysis",
+      "difficulty": 2,
+      "category": "Aggregation (GROUP BY + HAVING + date filter)",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-05-29",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/2170-department-workforce-analysis?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/2170-department-workforce-analysis?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/2170-department-workforce-analysis?code_type=6"
+      },
+      "tables": ["techcorp_workforce"],
+      "question": "-- The workforce planning team is analyzing department growth since the company's expansion, focusing on teams that have grown substantially.\r\n\r\n-- For each department with 5 or more employees hired after 2020, return the `name`, `headcount`, `total payroll`, and `average salary`.",
+      "schema_sql": {
+        "techcorp_workforce": [
+          {"name": "department", "type": "text"},
+          {"name": "first_name", "type": "text"},
+          {"name": "id", "type": "bigint"},
+          {"name": "joining_date", "type": "date"},
+          {"name": "last_name", "type": "text"},
+          {"name": "phone_number", "type": "text"},
+          {"name": "salary", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    }
+  ],
+  "selection_meta": {
+    "pool_sizes_freemium": {"easy": 29, "medium": 33, "hard": 0},
+    "queued_ids_count": 40,
+    "fresh_remaining_before_today": {"easy": 21, "medium": 2},
+    "excluded_attempted_or_queued": "all 40 IDs across daily sets 2026-05-27..2026-06-04 + full attempt history checked",
+    "repeats_used": [
+      {"id": 9897, "reason": "unsolved", "last_queued": "2026-05-29"},
+      {"id": 2170, "reason": "unsolved", "last_queued": "2026-05-29"}
+    ],
+    "category_balance_check": "4 categories: Filter/Basic (9688), Aggregation (10060, 10130, 2170), Window Functions (9897). Aggregation-heavy because both fresh Mediums (10060, 10130) are aggregation and the only unsolved repeats available were 9897/2170.",
+    "generated_at": "2026-06-05T11:00:00+00:00",
+    "generated_by": "manual regeneration (bug fix) — replaces buggy v1 that re-queued 5 already-seen questions",
+    "fix_notes": "v1 excluded only last 6 daily files + 100 attempt rows, so duplicates from 2026-05-27..29 slipped through. v2 dedupes against ALL daily files + full attempt history, and applies repeat policy (option 1: unsolved-first, then least-recently-used) since the Medium pool is nearly exhausted."
+  }
+}
