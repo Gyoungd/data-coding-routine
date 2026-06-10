@@ -1,0 +1,522 @@
+{
+  "date": "2026-06-07",
+  "weekday": "Sunday",
+  "difficulty_mix": {
+    "easy": 1,
+    "medium": 4,
+    "hard": 0,
+    "rule": "Non-Monday: 1 Easy + 4 Medium"
+  },
+  "languages": [
+    "sql (PostgreSQL)",
+    "python (pandas)",
+    "pyspark"
+  ],
+  "questions": [
+    {
+      "id": 10024,
+      "slug": "10024-wine-varieties-tasted-by-roger-voss",
+      "title": "Wine varieties tasted by 'Roger Voss'",
+      "difficulty": 1,
+      "category": "Filter/Basic",
+      "is_repeat": false,
+      "repeat_reason": null,
+      "last_queued": null,
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10024-wine-varieties-tasted-by-roger-voss?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10024-wine-varieties-tasted-by-roger-voss?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10024-wine-varieties-tasted-by-roger-voss?code_type=6"
+      },
+      "tables": [
+        "winemag_p2"
+      ],
+      "question": "-- Find wine varieties tasted by 'Roger Voss' and with a value in the 'region_1' column of the dataset. Output unique variety names only.",
+      "schema_sql": {
+        "winemag_p2": [
+          {
+            "name": "country",
+            "type": "text"
+          },
+          {
+            "name": "description",
+            "type": "text"
+          },
+          {
+            "name": "designation",
+            "type": "text"
+          },
+          {
+            "name": "id",
+            "type": "bigint"
+          },
+          {
+            "name": "points",
+            "type": "bigint"
+          },
+          {
+            "name": "price",
+            "type": "double precision"
+          },
+          {
+            "name": "province",
+            "type": "text"
+          },
+          {
+            "name": "region_1",
+            "type": "text"
+          },
+          {
+            "name": "region_2",
+            "type": "text"
+          },
+          {
+            "name": "taster_name",
+            "type": "text"
+          },
+          {
+            "name": "taster_twitter_handle",
+            "type": "text"
+          },
+          {
+            "name": "title",
+            "type": "text"
+          },
+          {
+            "name": "variety",
+            "type": "text"
+          },
+          {
+            "name": "winery",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 9856,
+      "slug": "9856-find-employees-with-the-same-salary",
+      "title": "Employees With the Same Salary",
+      "difficulty": 2,
+      "category": "Subquery/CTE",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-05-30",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9856-find-employees-with-the-same-salary?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9856-find-employees-with-the-same-salary?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9856-find-employees-with-the-same-salary?code_type=6"
+      },
+      "tables": [
+        "worker"
+      ],
+      "question": "-- Find employees who earn the same salary.\r\n\r\n-- Output the worker id along with the first name and the salary in descending order.",
+      "schema_sql": {
+        "worker": [
+          {
+            "name": "department",
+            "type": "text"
+          },
+          {
+            "name": "first_name",
+            "type": "text"
+          },
+          {
+            "name": "joining_date",
+            "type": "date"
+          },
+          {
+            "name": "last_name",
+            "type": "text"
+          },
+          {
+            "name": "salary",
+            "type": "bigint"
+          },
+          {
+            "name": "worker_id",
+            "type": "bigint"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 9881,
+      "slug": "9881-make-a-report-showing-the-number-of-survivors-and-non-survivors-by-passenger-class",
+      "title": "Titanic Survivors and Non-Survivors",
+      "difficulty": 2,
+      "category": "Aggregation",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-05-31",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9881-make-a-report-showing-the-number-of-survivors-and-non-survivors-by-passenger-class?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9881-make-a-report-showing-the-number-of-survivors-and-non-survivors-by-passenger-class?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9881-make-a-report-showing-the-number-of-survivors-and-non-survivors-by-passenger-class?code_type=6"
+      },
+      "tables": [
+        "titanic"
+      ],
+      "question": "Make a report showing the number of survivors and non-survivors by passenger class. Classes are categorized based on the `pclass` value as:\r\n\r\n•\tFirst class: `pclass = 1`\r\n•\tSecond class: `pclass = 2`\r\n•\tThird class: `pclass = 3`\r\n\r\nOutput the number of survivors and non-survivors by each class.",
+      "schema_sql": {
+        "titanic": [
+          {
+            "name": "age",
+            "type": "double precision"
+          },
+          {
+            "name": "cabin",
+            "type": "text"
+          },
+          {
+            "name": "embarked",
+            "type": "text"
+          },
+          {
+            "name": "fare",
+            "type": "double precision"
+          },
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "parch",
+            "type": "bigint"
+          },
+          {
+            "name": "passengerid",
+            "type": "bigint"
+          },
+          {
+            "name": "pclass",
+            "type": "bigint"
+          },
+          {
+            "name": "sex",
+            "type": "text"
+          },
+          {
+            "name": "sibsp",
+            "type": "bigint"
+          },
+          {
+            "name": "survived",
+            "type": "bigint"
+          },
+          {
+            "name": "ticket",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 10048,
+      "slug": "10048-top-businesses-with-most-reviews",
+      "title": "Top Businesses With Most Reviews",
+      "difficulty": 2,
+      "category": "Window Functions",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-05-31",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10048-top-businesses-with-most-reviews?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10048-top-businesses-with-most-reviews?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10048-top-businesses-with-most-reviews?code_type=6"
+      },
+      "tables": [
+        "yelp_business"
+      ],
+      "question": "-- Find the top 5 businesses with most reviews. Assume that each row has a unique business_id such that the total reviews for each business is listed on each row. Output the business name along with the total number of reviews and order your results by the total reviews in descending order.\r\n\r\n-- If there are ties in review counts, businesses with the same number of reviews receive the same rank, and subsequent ranks are skipped accordingly (e.g., if two businesses tie for rank 4, the next business receives rank 6, skipping rank 5).",
+      "schema_sql": {
+        "yelp_business": [
+          {
+            "name": "address",
+            "type": "text"
+          },
+          {
+            "name": "business_id",
+            "type": "text"
+          },
+          {
+            "name": "categories",
+            "type": "text"
+          },
+          {
+            "name": "city",
+            "type": "text"
+          },
+          {
+            "name": "is_open",
+            "type": "bigint"
+          },
+          {
+            "name": "latitude",
+            "type": "double precision"
+          },
+          {
+            "name": "longitude",
+            "type": "double precision"
+          },
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "neighborhood",
+            "type": "text"
+          },
+          {
+            "name": "postal_code",
+            "type": "text"
+          },
+          {
+            "name": "review_count",
+            "type": "bigint"
+          },
+          {
+            "name": "stars",
+            "type": "double precision"
+          },
+          {
+            "name": "state",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 10078,
+      "slug": "10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality",
+      "title": "Matching Similar Hosts and Guests",
+      "difficulty": 2,
+      "category": "Join (multi-table)",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-05-31",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality?code_type=6"
+      },
+      "tables": [
+        "airbnb_hosts",
+        "airbnb_guests"
+      ],
+      "question": "-- Find matching hosts and guests pairs in a way that they are both of the same gender and nationality.\r\n-- Output the host id and the guest id of matched pair.",
+      "schema_sql": {
+        "airbnb_hosts": [
+          {
+            "name": "age",
+            "type": "bigint"
+          },
+          {
+            "name": "gender",
+            "type": "text"
+          },
+          {
+            "name": "host_id",
+            "type": "bigint"
+          },
+          {
+            "name": "nationality",
+            "type": "text"
+          }
+        ],
+        "airbnb_guests": [
+          {
+            "name": "age",
+            "type": "bigint"
+          },
+          {
+            "name": "gender",
+            "type": "text"
+          },
+          {
+            "name": "guest_id",
+            "type": "bigint"
+          },
+          {
+            "name": "nationality",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    }
+  ],
+  "selection_meta": {
+    "pool_sizes_freemium": {
+      "easy": 29,
+      "medium": 33,
+      "hard": "not_queried (non-Monday)"
+    },
+    "queued_ids_count": 44,
+    "fresh_remaining": {
+      "easy": 14,
+      "medium": 0
+    },
+    "excluded_attempted_ids": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2010,
+      2014,
+      2015,
+      2016,
+      2017,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026,
+      2041,
+      2042,
+      2045,
+      2052,
+      2056,
+      2061,
+      2072,
+      2080,
+      2081,
+      2083,
+      2091,
+      2100,
+      2109,
+      2110,
+      2126,
+      2127,
+      2129,
+      2151,
+      2156,
+      2159,
+      2161,
+      2172,
+      9598,
+      9602,
+      9613,
+      9617,
+      9618,
+      9619,
+      9620,
+      9622,
+      9805,
+      9842,
+      9891,
+      9892,
+      9894,
+      9911,
+      9915,
+      9917,
+      9924,
+      9972,
+      10004,
+      10026,
+      10085,
+      10087,
+      10090,
+      10128,
+      10176,
+      10183,
+      10184,
+      10277,
+      10285,
+      10299,
+      10300,
+      10304,
+      10308,
+      10314,
+      10315,
+      10318,
+      10322,
+      10351,
+      10352,
+      10353,
+      10544,
+      10545,
+      10546,
+      10553
+    ],
+    "repeats_used": [
+      {
+        "id": 9856,
+        "reason": "unsolved",
+        "last_queued": "2026-05-30"
+      },
+      {
+        "id": 9881,
+        "reason": "unsolved",
+        "last_queued": "2026-05-31"
+      },
+      {
+        "id": 10048,
+        "reason": "unsolved",
+        "last_queued": "2026-05-31"
+      },
+      {
+        "id": 10078,
+        "reason": "unsolved",
+        "last_queued": "2026-05-31"
+      }
+    ],
+    "category_balance_check": "5 distinct categories: Filter/Basic (easy), Subquery/CTE, Aggregation, Window Functions, Join (multi-table)",
+    "notes": "Medium freemium pool fully exhausted (all 33 already queued) -> all 4 mediums are repeats per policy 4.5, chosen as the 4 oldest unsolved mediums (9856 @2026-05-30; 9881/10048/10078 @2026-05-31). Easy fresh pool still available; 10024 is new. attempts paginated fully (133 correct attempts across 2 pages); excluded_attempted_ids lists distinct solved question_ids.",
+    "generated_at": "2026-06-07T08:54:27.779266+00:00",
+    "generated_by": "scheduled task"
+  }
+}

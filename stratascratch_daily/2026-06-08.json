@@ -1,0 +1,418 @@
+{
+  "date": "2026-06-08",
+  "weekday": "Monday",
+  "difficulty_mix": {
+    "easy": 1,
+    "medium": 3,
+    "hard": 1,
+    "rule": "Monday: 1 Easy + 3 Medium + 1 Hard"
+  },
+  "languages": [
+    "sql (PostgreSQL)",
+    "python (pandas)",
+    "pyspark"
+  ],
+  "questions": [
+    {
+      "id": 2167,
+      "slug": "2167-high-earners-in-support-departments",
+      "title": "High Earners in Support Departments",
+      "difficulty": 1,
+      "category": "Filter/Basic",
+      "is_repeat": false,
+      "repeat_reason": null,
+      "last_queued": null,
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/2167-high-earners-in-support-departments?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/2167-high-earners-in-support-departments?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/2167-high-earners-in-support-departments?code_type=6"
+      },
+      "tables": [
+        "techcorp_workforce"
+      ],
+      "question": "The HR team is reviewing compensation packages for employees in support functions. They want to identify high earners in the HR and Admin departments for a salary benchmarking study. Find all employees who earn more than $80,000 and work in either the HR or Admin department. Return first name, last name, department, and salary.",
+      "schema_sql": {
+        "techcorp_workforce": [
+          {
+            "name": "department",
+            "type": "text"
+          },
+          {
+            "name": "first_name",
+            "type": "text"
+          },
+          {
+            "name": "id",
+            "type": "bigint"
+          },
+          {
+            "name": "joining_date",
+            "type": "date"
+          },
+          {
+            "name": "last_name",
+            "type": "text"
+          },
+          {
+            "name": "phone_number",
+            "type": "text"
+          },
+          {
+            "name": "salary",
+            "type": "bigint"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 9817,
+      "slug": "9817-find-the-number-of-times-each-word-appears-in-drafts",
+      "title": "Count Occurrences Of Words In Drafts",
+      "difficulty": 2,
+      "category": "String/Text",
+      "is_repeat": false,
+      "repeat_reason": null,
+      "last_queued": null,
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9817-find-the-number-of-times-each-word-appears-in-drafts?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9817-find-the-number-of-times-each-word-appears-in-drafts?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9817-find-the-number-of-times-each-word-appears-in-drafts?code_type=6"
+      },
+      "tables": [
+        "google_file_store"
+      ],
+      "question": "Find the number of times each word appears in the `contents` column across all rows in the `google_file_store` dataset. Output two columns: `word` and `occurrences`.",
+      "schema_sql": {
+        "google_file_store": [
+          {
+            "name": "contents",
+            "type": "text"
+          },
+          {
+            "name": "filename",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 10049,
+      "slug": "10049-reviews-of-categories",
+      "title": "Reviews of Categories",
+      "difficulty": 2,
+      "category": "Aggregation",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-01",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10049-reviews-of-categories?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10049-reviews-of-categories?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10049-reviews-of-categories?code_type=6"
+      },
+      "tables": [
+        "yelp_business"
+      ],
+      "question": "Calculate number of reviews for every business category. Output the category along with the total number of reviews. Order by total reviews in descending order.",
+      "schema_sql": {
+        "yelp_business": [
+          {
+            "name": "address",
+            "type": "text"
+          },
+          {
+            "name": "business_id",
+            "type": "text"
+          },
+          {
+            "name": "categories",
+            "type": "text"
+          },
+          {
+            "name": "city",
+            "type": "text"
+          },
+          {
+            "name": "is_open",
+            "type": "bigint"
+          },
+          {
+            "name": "latitude",
+            "type": "double precision"
+          },
+          {
+            "name": "longitude",
+            "type": "double precision"
+          },
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "neighborhood",
+            "type": "text"
+          },
+          {
+            "name": "postal_code",
+            "type": "text"
+          },
+          {
+            "name": "review_count",
+            "type": "bigint"
+          },
+          {
+            "name": "stars",
+            "type": "double precision"
+          },
+          {
+            "name": "state",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 10077,
+      "slug": "10077-income-by-title-and-gender",
+      "title": "Income By Title and Gender",
+      "difficulty": 2,
+      "category": "Join (multi-table)",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-01",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10077-income-by-title-and-gender?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10077-income-by-title-and-gender?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10077-income-by-title-and-gender?code_type=6"
+      },
+      "tables": [
+        "sf_employee",
+        "sf_bonus"
+      ],
+      "question": "Find the average total compensation based on employee titles and gender. Total compensation is calculated by adding both the salary and bonus of each employee. However, not every employee receives a bonus so disregard employees without bonuses in your calculation. Employee can receive more than one bonus. Output the employee title, gender (i.e., sex), along with the average total compensation.",
+      "schema_sql": {
+        "sf_employee": [
+          {
+            "name": "address",
+            "type": "text"
+          },
+          {
+            "name": "age",
+            "type": "bigint"
+          },
+          {
+            "name": "city",
+            "type": "text"
+          },
+          {
+            "name": "department",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "text"
+          },
+          {
+            "name": "employee_title",
+            "type": "text"
+          },
+          {
+            "name": "first_name",
+            "type": "text"
+          },
+          {
+            "name": "id",
+            "type": "bigint"
+          },
+          {
+            "name": "last_name",
+            "type": "text"
+          },
+          {
+            "name": "manager_id",
+            "type": "bigint"
+          },
+          {
+            "name": "salary",
+            "type": "bigint"
+          },
+          {
+            "name": "sex",
+            "type": "text"
+          },
+          {
+            "name": "target",
+            "type": "bigint"
+          }
+        ],
+        "sf_bonus": [
+          {
+            "name": "bonus",
+            "type": "bigint"
+          },
+          {
+            "name": "worker_ref_id",
+            "type": "bigint"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 2007,
+      "slug": "2007-rank-variance-per-country",
+      "title": "Rank Variance Per Country",
+      "difficulty": 3,
+      "category": "Window Functions",
+      "is_repeat": false,
+      "repeat_reason": null,
+      "last_queued": null,
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/2007-rank-variance-per-country?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/2007-rank-variance-per-country?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/2007-rank-variance-per-country?code_type=6"
+      },
+      "tables": [
+        "fb_comments_count",
+        "fb_active_users"
+      ],
+      "question": "Compare the total number of comments made by users in each country during December 2019 and January 2020. For each month, rank countries by their total number of comments in descending order. Countries with the same total should share the same rank, and the next rank should increase by one (without skipping numbers). Return the names of the countries whose rank improved from December to January (that is, their rank number became smaller).",
+      "schema_sql": {
+        "fb_comments_count": [
+          {
+            "name": "created_at",
+            "type": "date"
+          },
+          {
+            "name": "number_of_comments",
+            "type": "bigint"
+          },
+          {
+            "name": "user_id",
+            "type": "bigint"
+          }
+        ],
+        "fb_active_users": [
+          {
+            "name": "country",
+            "type": "text"
+          },
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "status",
+            "type": "text"
+          },
+          {
+            "name": "user_id",
+            "type": "bigint"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    }
+  ],
+  "selection_meta": {
+    "pool_sizes_freemium": {
+      "easy": 29,
+      "medium": 33,
+      "hard": 5
+    },
+    "queued_ids_count": 45,
+    "fresh_remaining": {
+      "easy": 13,
+      "medium": 1
+    },
+    "excluded_attempted_ids": [
+      2005,
+      2024,
+      2056,
+      2110,
+      2172,
+      9688,
+      9805,
+      9842,
+      9892,
+      9894,
+      9911,
+      9917,
+      10004,
+      10024,
+      10085,
+      10087,
+      10090,
+      10183,
+      10285,
+      10299,
+      10304,
+      10322,
+      10352,
+      10353,
+      10553
+    ],
+    "repeats_used": [
+      {
+        "id": 10049,
+        "reason": "unsolved",
+        "last_queued": "2026-06-01"
+      },
+      {
+        "id": 10077,
+        "reason": "unsolved",
+        "last_queued": "2026-06-01"
+      }
+    ],
+    "category_balance_check": "5 distinct categories selected: Filter/Basic, String/Text, Aggregation, Join (multi-table), Window Functions. Medium pool exhausted of fresh items (only 9817 fresh); 2 medium slots filled via repeat policy option 1 (unsolved, least-recently-queued: both last queued 2026-06-01).",
+    "generated_at": "2026-06-07T23:47:49.118725+00:00",
+    "generated_by": "scheduled task"
+  }
+}

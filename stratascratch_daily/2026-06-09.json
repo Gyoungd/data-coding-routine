@@ -1,0 +1,194 @@
+{
+  "date": "2026-06-09",
+  "weekday": "Tuesday",
+  "difficulty_mix": {
+    "easy": 1,
+    "medium": 4,
+    "hard": 0,
+    "rule": "Non-Monday: 1 Easy + 4 Medium"
+  },
+  "languages": [
+    "sql (PostgreSQL)",
+    "python (pandas)",
+    "pyspark"
+  ],
+  "questions": [
+    {
+      "id": 2168,
+      "slug": "2168-users-missing-phone-numbers",
+      "title": "Users Missing Phone Numbers",
+      "difficulty": 1,
+      "category": "Filter/Basic",
+      "is_repeat": false,
+      "repeat_reason": null,
+      "last_queued": null,
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/2168-users-missing-phone-numbers?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/2168-users-missing-phone-numbers?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/2168-users-missing-phone-numbers?code_type=6"
+      },
+      "tables": [
+        "fintech_app_users"
+      ],
+      "question": "-- The product team is launching a new WhatsApp notification feature and needs to identify users who haven't provided their phone numbers yet. These users will be shown a prompt to add their contact information.\r\n\r\n-- Find all users who have not provided a phone number. Return the `user ID` and `name`.",
+      "schema_sql": {
+        "fintech_app_users": [
+          {"name": "phone_number", "type": "text"},
+          {"name": "user_id", "type": "bigint"},
+          {"name": "user_name", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 9905,
+      "slug": "9905-highest-target-under-manager",
+      "title": "Highest Target Under Manager",
+      "difficulty": 2,
+      "category": "Subquery/CTE",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-02",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9905-highest-target-under-manager?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9905-highest-target-under-manager?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9905-highest-target-under-manager?code_type=6"
+      },
+      "tables": [
+        "salesforce_employees"
+      ],
+      "question": "-- Identify the employee(s) working under manager `manager_id=13` who have achieved the highest target. Return each such employee’s first name alongside the target value. The goal is to display the maximum target among all employees under `manager_id=13` and show which employee(s) reached that top value.",
+      "schema_sql": {
+        "salesforce_employees": [
+          {"name": "address", "type": "text"},
+          {"name": "age", "type": "bigint"},
+          {"name": "bonus", "type": "bigint"},
+          {"name": "city", "type": "text"},
+          {"name": "department", "type": "text"},
+          {"name": "email", "type": "text"},
+          {"name": "employee_title", "type": "text"},
+          {"name": "first_name", "type": "text"},
+          {"name": "id", "type": "bigint"},
+          {"name": "last_name", "type": "text"},
+          {"name": "manager_id", "type": "bigint"},
+          {"name": "salary", "type": "bigint"},
+          {"name": "sex", "type": "text"},
+          {"name": "target", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 10156,
+      "slug": "10156-number-of-units-per-nationality",
+      "title": "Number Of Units Per Nationality",
+      "difficulty": 2,
+      "category": "Join (multi-table)",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-02",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10156-number-of-units-per-nationality?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10156-number-of-units-per-nationality?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10156-number-of-units-per-nationality?code_type=6"
+      },
+      "tables": [
+        "airbnb_hosts",
+        "airbnb_units"
+      ],
+      "question": "-- Write a query that returns how many different apartment-type units (counted by distinct `unit_id`) are owned by people under 30, grouped by their nationality. Sort the results by the number of apartments in descending order.",
+      "schema_sql": {
+        "airbnb_hosts": [
+          {"name": "age", "type": "bigint"},
+          {"name": "gender", "type": "text"},
+          {"name": "host_id", "type": "bigint"},
+          {"name": "nationality", "type": "text"}
+        ],
+        "airbnb_units": [
+          {"name": "city", "type": "text"},
+          {"name": "country", "type": "text"},
+          {"name": "host_id", "type": "bigint"},
+          {"name": "n_bedrooms", "type": "bigint"},
+          {"name": "n_beds", "type": "bigint"},
+          {"name": "unit_id", "type": "text"},
+          {"name": "unit_type", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 2102,
+      "slug": "2102-flags-per-video",
+      "title": "Flags per Video",
+      "difficulty": 2,
+      "category": "Aggregation",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-03",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/2102-flags-per-video?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/2102-flags-per-video?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/2102-flags-per-video?code_type=6"
+      },
+      "tables": [
+        "user_flags"
+      ],
+      "question": "-- For each video, find how many unique users flagged it. A unique user can be identified using the combination of their first name and last name. Do not consider rows in which there is no flag ID.",
+      "schema_sql": {
+        "user_flags": [
+          {"name": "flag_id", "type": "text"},
+          {"name": "user_firstname", "type": "text"},
+          {"name": "user_lastname", "type": "text"},
+          {"name": "video_id", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 9650,
+      "slug": "9650-find-the-top-10-ranked-songs-in-2010",
+      "title": "Top 10 Songs 2010",
+      "difficulty": 2,
+      "category": "Filter/Basic",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-03",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9650-find-the-top-10-ranked-songs-in-2010?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9650-find-the-top-10-ranked-songs-in-2010?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9650-find-the-top-10-ranked-songs-in-2010?code_type=6"
+      },
+      "tables": [
+        "billboard_top_100_year_end"
+      ],
+      "question": "Find the top 10 ranked songs in 2010. Output the rank, group name, and song name, but do not show the same song twice. Sort the result based on the rank in ascending order.",
+      "schema_sql": {
+        "billboard_top_100_year_end": [
+          {"name": "artist", "type": "text"},
+          {"name": "group_name", "type": "text"},
+          {"name": "id", "type": "bigint"},
+          {"name": "song_name", "type": "text"},
+          {"name": "year", "type": "bigint"},
+          {"name": "year_rank", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    }
+  ],
+  "selection_meta": {
+    "pool_sizes_freemium": {"easy": 29, "medium": 33, "hard": null},
+    "queued_ids_count": 47,
+    "fresh_remaining": {"easy": 12, "medium": 0},
+    "excluded_attempted_ids": [2000, 2001, 2002, 2003, 2004, 2005, 2010, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, 2041, 2042, 2045, 2050, 2052, 2056, 2061, 2072, 2080, 2081, 2083, 2091, 2100, 2109, 2110, 2126, 2127, 2129, 2145, 2151, 2156, 2159, 2161, 2172, 9598, 9602, 9613, 9617, 9618, 9619, 9620, 9622, 9688, 9805, 9842, 9891, 9892, 9894, 9911, 9915, 9917, 9924, 9972, 10004, 10024, 10026, 10085, 10087, 10090, 10128, 10176, 10183, 10184, 10277, 10285, 10299, 10300, 10304, 10308, 10314, 10315, 10318, 10322, 10351, 10352, 10353, 10544, 10545, 10546, 10553],
+    "repeats_used": [
+      {"id": 9905, "reason": "unsolved", "last_queued": "2026-06-02"},
+      {"id": 10156, "reason": "unsolved", "last_queued": "2026-06-02"},
+      {"id": 2102, "reason": "unsolved", "last_queued": "2026-06-03"},
+      {"id": 9650, "reason": "unsolved", "last_queued": "2026-06-03"}
+    ],
+    "category_balance_check": "4 distinct categories of 7: Filter/Basic (x2: 2168, 9650), Subquery/CTE (9905), Join (10156), Aggregation (2102). The Medium freemium pool (33) is fully exhausted by past sets, so all 4 Mediums are repeats; per option-1 policy each is an UNSOLVED medium chosen oldest-last-queued first (the two 06-02 questions, then two 06-03 questions). No Window/String/Date question was available among the remaining fresh or oldest-repeat pool today, so 5 distinct categories was not achievable. Operationally the set still spans varied operations: IS NULL filter, correlated MAX, JOIN + COUNT DISTINCT, COUNT DISTINCT GROUP BY, and DISTINCT + filter.",
+    "timezone_note": "Bash reports UTC (2026-06-08), but the user is in Asia/Seoul (KST, UTC+9) where the local date is 2026-06-09 Tuesday. The 2026-06-08 (Monday) set was generated yesterday KST morning; this run generates the 2026-06-09 set. Filename uses the local KST date to keep one set per local day.",
+    "generated_at": "2026-06-09T08:19:48+09:00",
+    "generated_by": "scheduled task"
+  }
+}
