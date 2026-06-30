@@ -1,0 +1,432 @@
+{
+  "date": "2026-06-15",
+  "weekday": "Monday",
+  "difficulty_mix": {
+    "easy": 1,
+    "medium": 3,
+    "hard": 1,
+    "rule": "Monday: 1 Easy + 3 Medium + 1 Hard"
+  },
+  "languages": [
+    "sql (PostgreSQL)",
+    "python (pandas)",
+    "pyspark"
+  ],
+  "questions": [
+    {
+      "id": 9943,
+      "slug": "9943-winter-olympics-events-list-by-height",
+      "title": "Olympics Events List By Age",
+      "difficulty": 1,
+      "category": "Aggregation",
+      "is_repeat": false,
+      "repeat_reason": null,
+      "last_queued": null,
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9943-winter-olympics-events-list-by-height?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9943-winter-olympics-events-list-by-height?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9943-winter-olympics-events-list-by-height?code_type=6"
+      },
+      "tables": [
+        "olympics_athletes_events"
+      ],
+      "question": "-- Find the lowest, average, and the highest ages of athletes across all Olympics. HINT: If athlete participated in more than one discipline at one Olympic games, consider it as a separate athlete, no need to remove such edge cases.",
+      "schema_sql": {
+        "olympics_athletes_events": [
+          {
+            "name": "age",
+            "type": "double precision"
+          },
+          {
+            "name": "city",
+            "type": "text"
+          },
+          {
+            "name": "event",
+            "type": "text"
+          },
+          {
+            "name": "games",
+            "type": "text"
+          },
+          {
+            "name": "height",
+            "type": "double precision"
+          },
+          {
+            "name": "id",
+            "type": "bigint"
+          },
+          {
+            "name": "medal",
+            "type": "text"
+          },
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "noc",
+            "type": "text"
+          },
+          {
+            "name": "season",
+            "type": "text"
+          },
+          {
+            "name": "sex",
+            "type": "text"
+          },
+          {
+            "name": "sport",
+            "type": "text"
+          },
+          {
+            "name": "team",
+            "type": "text"
+          },
+          {
+            "name": "weight",
+            "type": "double precision"
+          },
+          {
+            "name": "year",
+            "type": "bigint"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 2101,
+      "slug": "2101-maximum-of-two-numbers",
+      "title": "Maximum of Two Numbers",
+      "difficulty": 2,
+      "category": "Join",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-10",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/2101-maximum-of-two-numbers?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/2101-maximum-of-two-numbers?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/2101-maximum-of-two-numbers?code_type=6"
+      },
+      "tables": [
+        "deloitte_numbers"
+      ],
+      "question": "-- Given a single column of numbers, consider all possible permutations of two numbers with replacement, assuming that pairs of numbers (x,y) and (y,x) are two different permutations. Then, for each permutation, find the maximum of the two numbers. \r\n-- Output three columns: the first number, the second number and the maximum of the two.",
+      "schema_sql": {
+        "deloitte_numbers": [
+          {
+            "name": "number",
+            "type": "bigint"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 10025,
+      "slug": "10025-find-all-possible-varieties-which-occur-in-either-of-the-winemag-datasets",
+      "title": "Find all possible varieties which occur in either of the winemag datasets",
+      "difficulty": 2,
+      "category": "Subquery/CTE",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-10",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10025-find-all-possible-varieties-which-occur-in-either-of-the-winemag-datasets?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10025-find-all-possible-varieties-which-occur-in-either-of-the-winemag-datasets?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10025-find-all-possible-varieties-which-occur-in-either-of-the-winemag-datasets?code_type=6"
+      },
+      "tables": [
+        "winemag_p1",
+        "winemag_p2"
+      ],
+      "question": "-- Find all possible varieties which occur in either of the winemag datasets.\r\n-- Output unique variety values only.\r\n-- Sort records based on the variety in ascending order.",
+      "schema_sql": {
+        "winemag_p1": [
+          {
+            "name": "country",
+            "type": "text"
+          },
+          {
+            "name": "description",
+            "type": "text"
+          },
+          {
+            "name": "designation",
+            "type": "text"
+          },
+          {
+            "name": "id",
+            "type": "bigint"
+          },
+          {
+            "name": "points",
+            "type": "bigint"
+          },
+          {
+            "name": "price",
+            "type": "double precision"
+          },
+          {
+            "name": "province",
+            "type": "text"
+          },
+          {
+            "name": "region_1",
+            "type": "text"
+          },
+          {
+            "name": "region_2",
+            "type": "text"
+          },
+          {
+            "name": "variety",
+            "type": "text"
+          },
+          {
+            "name": "winery",
+            "type": "text"
+          }
+        ],
+        "winemag_p2": [
+          {
+            "name": "country",
+            "type": "text"
+          },
+          {
+            "name": "description",
+            "type": "text"
+          },
+          {
+            "name": "designation",
+            "type": "text"
+          },
+          {
+            "name": "id",
+            "type": "bigint"
+          },
+          {
+            "name": "points",
+            "type": "bigint"
+          },
+          {
+            "name": "price",
+            "type": "double precision"
+          },
+          {
+            "name": "province",
+            "type": "text"
+          },
+          {
+            "name": "region_1",
+            "type": "text"
+          },
+          {
+            "name": "region_2",
+            "type": "text"
+          },
+          {
+            "name": "taster_name",
+            "type": "text"
+          },
+          {
+            "name": "taster_twitter_handle",
+            "type": "text"
+          },
+          {
+            "name": "title",
+            "type": "text"
+          },
+          {
+            "name": "variety",
+            "type": "text"
+          },
+          {
+            "name": "winery",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 9817,
+      "slug": "9817-find-the-number-of-times-each-word-appears-in-drafts",
+      "title": "Count Occurrences Of Words In Drafts",
+      "difficulty": 2,
+      "category": "String/Text",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-13",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9817-find-the-number-of-times-each-word-appears-in-drafts?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9817-find-the-number-of-times-each-word-appears-in-drafts?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9817-find-the-number-of-times-each-word-appears-in-drafts?code_type=6"
+      },
+      "tables": [
+        "google_file_store"
+      ],
+      "question": "Find the number of times each word appears in the `contents` column across all rows in the `google_file_store` dataset. Output two columns: `word` and `occurrences`.",
+      "schema_sql": {
+        "google_file_store": [
+          {
+            "name": "contents",
+            "type": "text"
+          },
+          {
+            "name": "filename",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 2054,
+      "slug": "2054-consecutive-days",
+      "title": "Consecutive Days",
+      "difficulty": 3,
+      "category": "Window Functions",
+      "is_repeat": false,
+      "repeat_reason": null,
+      "last_queued": null,
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/2054-consecutive-days?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/2054-consecutive-days?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/2054-consecutive-days?code_type=6"
+      },
+      "tables": [
+        "sf_events"
+      ],
+      "question": "-- Find all the users who were active for 3 consecutive days or more.",
+      "schema_sql": {
+        "sf_events": [
+          {
+            "name": "account_id",
+            "type": "character varying"
+          },
+          {
+            "name": "record_date",
+            "type": "date"
+          },
+          {
+            "name": "user_id",
+            "type": "character varying"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    }
+  ],
+  "selection_meta": {
+    "pool_sizes_freemium": {
+      "easy": 29,
+      "medium": 33,
+      "hard": 5
+    },
+    "queued_ids_count": 53,
+    "fresh_remaining": {
+      "easy": 7,
+      "medium": 0,
+      "hard": 3
+    },
+    "excluded_attempted_ids": [
+      2005,
+      2007,
+      2024,
+      2056,
+      2110,
+      2167,
+      2172,
+      9688,
+      9805,
+      9842,
+      9892,
+      9894,
+      9911,
+      9917,
+      10004,
+      10024,
+      10085,
+      10087,
+      10090,
+      10130,
+      10183,
+      10285,
+      10299,
+      10304,
+      10322,
+      10352,
+      10353,
+      10553
+    ],
+    "repeats_used": [
+      {
+        "id": 2101,
+        "reason": "unsolved",
+        "last_queued": "2026-06-10"
+      },
+      {
+        "id": 10025,
+        "reason": "unsolved",
+        "last_queued": "2026-06-10"
+      },
+      {
+        "id": 9817,
+        "reason": "unsolved",
+        "last_queued": "2026-06-13"
+      }
+    ],
+    "category_balance_check": "5 distinct categories: Aggregation (9943), Join (2101), Subquery/CTE (10025), String/Text (9817), Window Functions (2054). Medium fresh pool fully exhausted (all 33 freemium Medium questions previously queued); 3 Medium slots filled via unsolved-first, oldest-queued-first repeat policy. Easy 9943 and Hard 2054 are fresh. Note: 2101 chosen over older unsolved Aggregation Medium 2102 (2026-06-09) to preserve category diversity per step 6.",
+    "generated_at": "2026-06-14T23:18:33.223800+00:00",
+    "generated_by": "scheduled task"
+  }
+}

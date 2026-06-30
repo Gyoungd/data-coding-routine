@@ -1,0 +1,474 @@
+{
+  "date": "2026-06-17",
+  "weekday": "Wednesday",
+  "difficulty_mix": {
+    "easy": 1,
+    "medium": 4,
+    "hard": 0,
+    "rule": "Non-Monday: 1 Easy + 4 Medium"
+  },
+  "languages": [
+    "sql (PostgreSQL)",
+    "python (pandas)",
+    "pyspark"
+  ],
+  "questions": [
+    {
+      "id": 9653,
+      "slug": "9653-count-the-number-of-user-events-performed-by-macbookpro-users",
+      "title": "MacBookPro User Event Count",
+      "difficulty": 1,
+      "category": "Aggregation",
+      "is_repeat": false,
+      "repeat_reason": null,
+      "last_queued": null,
+      "tables": [
+        "playbook_events"
+      ],
+      "question": "-- Count the number of user events performed by MacBookPro users.\r\n-- Output the result along with the event name.\r\n-- Sort the result based on the event count in the descending order.",
+      "schema_sql": {
+        "playbook_events": [
+          {
+            "name": "device",
+            "type": "text"
+          },
+          {
+            "name": "event_name",
+            "type": "text"
+          },
+          {
+            "name": "event_type",
+            "type": "text"
+          },
+          {
+            "name": "location",
+            "type": "text"
+          },
+          {
+            "name": "occurred_at",
+            "type": "timestamp without time zone"
+          },
+          {
+            "name": "user_id",
+            "type": "bigint"
+          }
+        ]
+      },
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9653-count-the-number-of-user-events-performed-by-macbookpro-users?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9653-count-the-number-of-user-events-performed-by-macbookpro-users?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9653-count-the-number-of-user-events-performed-by-macbookpro-users?code_type=6"
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 9858,
+      "slug": "9858-find-employees-in-the-hr-department-and-output-the-result-with-one-duplicate",
+      "title": "Duplicate HR Department Employees",
+      "difficulty": 2,
+      "category": "Filter/Basic",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-10",
+      "tables": [
+        "worker"
+      ],
+      "question": "-- Generate a list of employees who work in the HR department, including only their first names and department in the output. Each employee should appear twice in the list, meaning their first name and department should be duplicated in the output.",
+      "schema_sql": {
+        "worker": [
+          {
+            "name": "department",
+            "type": "text"
+          },
+          {
+            "name": "first_name",
+            "type": "text"
+          },
+          {
+            "name": "joining_date",
+            "type": "date"
+          },
+          {
+            "name": "last_name",
+            "type": "text"
+          },
+          {
+            "name": "salary",
+            "type": "bigint"
+          },
+          {
+            "name": "worker_id",
+            "type": "bigint"
+          }
+        ]
+      },
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9858-find-employees-in-the-hr-department-and-output-the-result-with-one-duplicate?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9858-find-employees-in-the-hr-department-and-output-the-result-with-one-duplicate?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9858-find-employees-in-the-hr-department-and-output-the-result-with-one-duplicate?code_type=6"
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 9856,
+      "slug": "9856-find-employees-with-the-same-salary",
+      "title": "Employees With the Same Salary",
+      "difficulty": 2,
+      "category": "Subquery/CTE",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-12",
+      "tables": [
+        "worker"
+      ],
+      "question": "-- Find employees who earn the same salary.\r\n\r\n-- Output the worker id along with the first name and the salary in descending order.",
+      "schema_sql": {
+        "worker": [
+          {
+            "name": "department",
+            "type": "text"
+          },
+          {
+            "name": "first_name",
+            "type": "text"
+          },
+          {
+            "name": "joining_date",
+            "type": "date"
+          },
+          {
+            "name": "last_name",
+            "type": "text"
+          },
+          {
+            "name": "salary",
+            "type": "bigint"
+          },
+          {
+            "name": "worker_id",
+            "type": "bigint"
+          }
+        ]
+      },
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9856-find-employees-with-the-same-salary?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9856-find-employees-with-the-same-salary?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9856-find-employees-with-the-same-salary?code_type=6"
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 10048,
+      "slug": "10048-top-businesses-with-most-reviews",
+      "title": "Top Businesses With Most Reviews",
+      "difficulty": 2,
+      "category": "Window Functions",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-12",
+      "tables": [
+        "yelp_business"
+      ],
+      "question": "-- Find the top 5 businesses with most reviews. Assume that each row has a unique business_id such that the total reviews for each business is listed on each row. Output the business name along with the total number of reviews and order your results by the total reviews in descending order.\r\n\r\n-- If there are ties in review counts, businesses with the same number of reviews receive the same rank, and subsequent ranks are skipped accordingly (e.g., if two businesses tie for rank 4, the next business receives rank 6, skipping rank 5).",
+      "schema_sql": {
+        "yelp_business": [
+          {
+            "name": "address",
+            "type": "text"
+          },
+          {
+            "name": "business_id",
+            "type": "text"
+          },
+          {
+            "name": "categories",
+            "type": "text"
+          },
+          {
+            "name": "city",
+            "type": "text"
+          },
+          {
+            "name": "is_open",
+            "type": "bigint"
+          },
+          {
+            "name": "latitude",
+            "type": "double precision"
+          },
+          {
+            "name": "longitude",
+            "type": "double precision"
+          },
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "neighborhood",
+            "type": "text"
+          },
+          {
+            "name": "postal_code",
+            "type": "text"
+          },
+          {
+            "name": "review_count",
+            "type": "bigint"
+          },
+          {
+            "name": "stars",
+            "type": "double precision"
+          },
+          {
+            "name": "state",
+            "type": "text"
+          }
+        ]
+      },
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10048-top-businesses-with-most-reviews?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10048-top-businesses-with-most-reviews?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10048-top-businesses-with-most-reviews?code_type=6"
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 10078,
+      "slug": "10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality",
+      "title": "Matching Similar Hosts and Guests",
+      "difficulty": 2,
+      "category": "Join",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-12",
+      "tables": [
+        "airbnb_hosts",
+        "airbnb_guests"
+      ],
+      "question": "-- Find matching hosts and guests pairs in a way that they are both of the same gender and nationality.\r\n-- Output the host id and the guest id of matched pair.",
+      "schema_sql": {
+        "airbnb_hosts": [
+          {
+            "name": "age",
+            "type": "bigint"
+          },
+          {
+            "name": "gender",
+            "type": "text"
+          },
+          {
+            "name": "host_id",
+            "type": "bigint"
+          },
+          {
+            "name": "nationality",
+            "type": "text"
+          }
+        ],
+        "airbnb_guests": [
+          {
+            "name": "age",
+            "type": "bigint"
+          },
+          {
+            "name": "gender",
+            "type": "text"
+          },
+          {
+            "name": "guest_id",
+            "type": "bigint"
+          },
+          {
+            "name": "nationality",
+            "type": "text"
+          }
+        ]
+      },
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality?code_type=6"
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    }
+  ],
+  "selection_meta": {
+    "pool_sizes_freemium": {
+      "easy": 29,
+      "medium": 33,
+      "hard": null
+    },
+    "queued_ids_count": 56,
+    "fresh_remaining": {
+      "easy": 4,
+      "medium": 0
+    },
+    "excluded_attempted_ids": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2007,
+      2010,
+      2014,
+      2015,
+      2016,
+      2017,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026,
+      2041,
+      2042,
+      2045,
+      2050,
+      2052,
+      2056,
+      2061,
+      2072,
+      2080,
+      2081,
+      2083,
+      2091,
+      2100,
+      2101,
+      2109,
+      2110,
+      2126,
+      2127,
+      2129,
+      2145,
+      2151,
+      2156,
+      2159,
+      2161,
+      2167,
+      2172,
+      9598,
+      9602,
+      9613,
+      9617,
+      9618,
+      9619,
+      9620,
+      9622,
+      9688,
+      9805,
+      9842,
+      9891,
+      9892,
+      9894,
+      9911,
+      9915,
+      9917,
+      9924,
+      9972,
+      10004,
+      10024,
+      10026,
+      10077,
+      10085,
+      10087,
+      10090,
+      10128,
+      10130,
+      10176,
+      10183,
+      10184,
+      10277,
+      10285,
+      10299,
+      10300,
+      10304,
+      10308,
+      10314,
+      10315,
+      10318,
+      10322,
+      10351,
+      10352,
+      10353,
+      10544,
+      10545,
+      10546,
+      10553
+    ],
+    "repeats_used": [
+      {
+        "id": 9858,
+        "reason": "unsolved",
+        "last_queued": "2026-06-10"
+      },
+      {
+        "id": 9856,
+        "reason": "unsolved",
+        "last_queued": "2026-06-12"
+      },
+      {
+        "id": 10048,
+        "reason": "unsolved",
+        "last_queued": "2026-06-12"
+      },
+      {
+        "id": 10078,
+        "reason": "unsolved",
+        "last_queued": "2026-06-12"
+      }
+    ],
+    "category_balance_check": "5 distinct categories: Aggregation (9653), Filter/Basic (9858), Subquery/CTE (9856), Window Functions (10048), Join (10078). Medium fresh pool exhausted (0 fresh) so all 4 mediums are repeats; per policy 4.5 all chosen are unsolved-tier; greedy category diversity applied within that tier (skipped older same-category repeats 2102/2170=Aggregation, 9813=Filter/Basic to avoid dupes). Categories for 9856/9858 reflect canonical solution skill (self-comparison / UNION duplicate), heuristic not literal keyword.",
+    "generated_at": "2026-06-16T23:20:51.614037+00:00",
+    "generated_by": "scheduled task"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "date": "2026-06-24",
+  "weekday": "Wednesday",
+  "difficulty_mix": {"easy": 1, "medium": 4, "hard": 0, "rule": "그 외 모든 요일: 1 Easy + 4 Medium"},
+  "languages": ["sql (PostgreSQL)", "python (pandas)", "pyspark"],
+  "questions": [
+    {
+      "id": 9937,
+      "slug": "9937-find-all-athletes-who-were-older-than-40-years-when-they-won-either-bronze-or-silver-medals",
+      "title": "Find all athletes who were older than 40 years when they won either Bronze or Silver medals",
+      "difficulty": 1,
+      "category": "Filter/Basic",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-01",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9937-find-all-athletes-who-were-older-than-40-years-when-they-won-either-bronze-or-silver-medals?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9937-find-all-athletes-who-were-older-than-40-years-when-they-won-either-bronze-or-silver-medals?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9937-find-all-athletes-who-were-older-than-40-years-when-they-won-either-bronze-or-silver-medals?code_type=6"
+      },
+      "tables": ["olympics_athletes_events"],
+      "question": "Find all athletes who were older than 40 years when they won either Bronze or Silver medals.",
+      "schema_sql": {
+        "olympics_athletes_events": [
+          {"name": "age", "type": "double precision"},
+          {"name": "city", "type": "text"},
+          {"name": "event", "type": "text"},
+          {"name": "games", "type": "text"},
+          {"name": "height", "type": "double precision"},
+          {"name": "id", "type": "bigint"},
+          {"name": "medal", "type": "text"},
+          {"name": "name", "type": "text"},
+          {"name": "noc", "type": "text"},
+          {"name": "season", "type": "text"},
+          {"name": "sex", "type": "text"},
+          {"name": "sport", "type": "text"},
+          {"name": "team", "type": "text"},
+          {"name": "weight", "type": "double precision"},
+          {"name": "year", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 10553,
+      "slug": "10553-finding-purchases",
+      "title": "Finding Purchases",
+      "difficulty": 2,
+      "category": "Window Functions",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-02",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10553-finding-purchases?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10553-finding-purchases?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10553-finding-purchases?code_type=6"
+      },
+      "tables": ["amazon_transactions"],
+      "question": "Identify returning active users by finding users who made a repeat purchase within 7 days or less of their previous transaction, excluding same-day purchases. Output a list of these `user_id`.",
+      "schema_sql": {
+        "amazon_transactions": [
+          {"name": "created_at", "type": "date"},
+          {"name": "id", "type": "bigint"},
+          {"name": "item", "type": "text"},
+          {"name": "revenue", "type": "bigint"},
+          {"name": "user_id", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 9781,
+      "slug": "9781-find-the-rate-of-processed-tickets-for-each-type",
+      "title": "Processed Ticket Rate By Type",
+      "difficulty": 2,
+      "category": "Aggregation",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-16",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9781-find-the-rate-of-processed-tickets-for-each-type?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9781-find-the-rate-of-processed-tickets-for-each-type?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9781-find-the-rate-of-processed-tickets-for-each-type?code_type=6"
+      },
+      "tables": ["facebook_complaints"],
+      "question": "Find the processed rate of tickets for each `type`. The processed rate is defined as the number of processed tickets divided by the total number of tickets for that type. Round this result to two decimal places.",
+      "schema_sql": {
+        "facebook_complaints": [
+          {"name": "complaint_id", "type": "bigint"},
+          {"name": "processed", "type": "boolean"},
+          {"name": "type", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 10077,
+      "slug": "10077-income-by-title-and-gender",
+      "title": "Income By Title and Gender",
+      "difficulty": 2,
+      "category": "Join (multi-table)",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-19",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10077-income-by-title-and-gender?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10077-income-by-title-and-gender?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10077-income-by-title-and-gender?code_type=6"
+      },
+      "tables": ["sf_employee", "sf_bonus"],
+      "question": "Find the average total compensation based on employee titles and gender. Total compensation is calculated by adding both the salary and bonus of each employee. However, not every employee receives a bonus so disregard employees without bonuses in your calculation. Employee can receive more than one bonus. Output the employee title, gender (i.e., sex), along with the average total compensation.",
+      "schema_sql": {
+        "sf_employee": [
+          {"name": "address", "type": "text"},
+          {"name": "age", "type": "bigint"},
+          {"name": "city", "type": "text"},
+          {"name": "department", "type": "text"},
+          {"name": "email", "type": "text"},
+          {"name": "employee_title", "type": "text"},
+          {"name": "first_name", "type": "text"},
+          {"name": "id", "type": "bigint"},
+          {"name": "last_name", "type": "text"},
+          {"name": "manager_id", "type": "bigint"},
+          {"name": "salary", "type": "bigint"},
+          {"name": "sex", "type": "text"},
+          {"name": "target", "type": "bigint"}
+        ],
+        "sf_bonus": [
+          {"name": "bonus", "type": "bigint"},
+          {"name": "worker_ref_id", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 2170,
+      "slug": "2170-department-workforce-analysis",
+      "title": "Department Workforce Analysis",
+      "difficulty": 2,
+      "category": "Date/Time",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-20",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/2170-department-workforce-analysis?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/2170-department-workforce-analysis?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/2170-department-workforce-analysis?code_type=6"
+      },
+      "tables": ["techcorp_workforce"],
+      "question": "The workforce planning team is analyzing department growth since the company's expansion, focusing on teams that have grown substantially. For each department with 5 or more employees hired after 2020, return the `name`, `headcount`, `total payroll`, and `average salary`.",
+      "schema_sql": {
+        "techcorp_workforce": [
+          {"name": "department", "type": "text"},
+          {"name": "first_name", "type": "text"},
+          {"name": "id", "type": "bigint"},
+          {"name": "joining_date", "type": "date"},
+          {"name": "last_name", "type": "text"},
+          {"name": "phone_number", "type": "text"},
+          {"name": "salary", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    }
+  ],
+  "selection_meta": {
+    "pool_sizes_freemium": {"easy": 29, "medium": 33, "hard": 0},
+    "queued_ids_count": 62,
+    "fresh_remaining": {"easy": 0, "medium": 0},
+    "excluded_attempted_ids": [2000, 2001, 2002, 2003, 2004, 2005, 2007, 2010, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, 2041, 2042, 2045, 2050, 2052, 2056, 2061, 2072, 2080, 2081, 2083, 2091, 2100, 2101, 2109, 2110, 2126, 2127, 2129, 2145, 2151, 2156, 2159, 2161, 2167, 2172, 9598, 9602, 9613, 9617, 9618, 9619, 9620, 9622, 9688, 9805, 9842, 9891, 9892, 9894, 9911, 9915, 9917, 9924, 9972, 9991, 10004, 10024, 10026, 10077, 10085, 10087, 10090, 10128, 10130, 10176, 10183, 10184, 10285, 10299, 10300, 10304, 10308, 10314, 10315, 10318, 10322, 10351, 10352, 10353, 10544, 10545, 10546, 10553],
+    "repeats_used": [
+      {"id": 9937, "reason": "unsolved", "last_queued": "2026-06-01"},
+      {"id": 10553, "reason": "unsolved", "last_queued": "2026-06-02"},
+      {"id": 9781, "reason": "unsolved", "last_queued": "2026-06-16"},
+      {"id": 10077, "reason": "unsolved", "last_queued": "2026-06-19"},
+      {"id": 2170, "reason": "unsolved", "last_queued": "2026-06-20"}
+    ],
+    "category_balance_check": "5 distinct categories: Filter/Basic, Window Functions, Aggregation, Join (multi-table), Date/Time",
+    "fresh_pool_exhausted": true,
+    "repeat_policy": "Option 1: unsolved-first, oldest last_queued first. All 5 picks are unsolved repeats (no correct attempt on record); none required falling back to solved-repeat tier.",
+    "date_note": "Sandbox `date` returned 2026-06-24 (UTC) Wednesday at run start. Prior daily files form a consecutive sequence ending 2026-06-23, so generating 2026-06-24 keeps the sequence gap-free; matched the established UTC-based file-naming convention.",
+    "generated_at": "2026-06-24T00:00:00Z",
+    "generated_by": "scheduled task"
+  }
+}

@@ -1,0 +1,367 @@
+{
+  "date": "2026-06-18",
+  "weekday": "Thursday",
+  "difficulty_mix": {
+    "easy": 1,
+    "medium": 4,
+    "hard": 0,
+    "rule": "Non-Monday weekday → 1 Easy + 4 Medium"
+  },
+  "languages": [
+    "sql (PostgreSQL)",
+    "python (pandas)",
+    "pyspark"
+  ],
+  "questions": [
+    {
+      "id": 9992,
+      "slug": "9992-find-artists-that-have-been-on-spotify-the-most-number-of-times",
+      "title": "Artist Appearance Count",
+      "difficulty": 1,
+      "category": "Aggregation",
+      "is_repeat": false,
+      "repeat_reason": null,
+      "last_queued": null,
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9992-find-artists-that-have-been-on-spotify-the-most-number-of-times?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9992-find-artists-that-have-been-on-spotify-the-most-number-of-times?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9992-find-artists-that-have-been-on-spotify-the-most-number-of-times?code_type=6"
+      },
+      "tables": [
+        "spotify_worldwide_daily_song_ranking"
+      ],
+      "question": "Find how many times each artist appeared on the Spotify ranking list.\r\nOutput the artist name along with the corresponding number of occurrences.\r\nOrder records by the number of occurrences in descending order.",
+      "schema_sql": {
+        "spotify_worldwide_daily_song_ranking": [
+          {
+            "name": "artist",
+            "type": "text"
+          },
+          {
+            "name": "id",
+            "type": "bigint"
+          },
+          {
+            "name": "position",
+            "type": "bigint"
+          },
+          {
+            "name": "region",
+            "type": "text"
+          },
+          {
+            "name": "stream_date",
+            "type": "date"
+          },
+          {
+            "name": "streams",
+            "type": "bigint"
+          },
+          {
+            "name": "trackname",
+            "type": "text"
+          },
+          {
+            "name": "url",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 9813,
+      "slug": "9813-make-the-friends-network-symmetric",
+      "title": "Make the friends network symmetric",
+      "difficulty": 2,
+      "category": "Join (multi-table)",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-11",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9813-make-the-friends-network-symmetric?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9813-make-the-friends-network-symmetric?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9813-make-the-friends-network-symmetric?code_type=6"
+      },
+      "tables": [
+        "google_friends_network"
+      ],
+      "question": "-- Make the friends network symmetric. \r\n-- For example, if 0 and 1 are friends, have the output contain both 0 and 1 under 1 and 0 respectively.",
+      "schema_sql": {
+        "google_friends_network": [
+          {
+            "name": "friend_id",
+            "type": "bigint"
+          },
+          {
+            "name": "user_id",
+            "type": "bigint"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 9650,
+      "slug": "9650-find-the-top-10-ranked-songs-in-2010",
+      "title": "Top 10 Songs 2010",
+      "difficulty": 2,
+      "category": "Filter/Basic",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-14",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9650-find-the-top-10-ranked-songs-in-2010?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9650-find-the-top-10-ranked-songs-in-2010?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9650-find-the-top-10-ranked-songs-in-2010?code_type=6"
+      },
+      "tables": [
+        "billboard_top_100_year_end"
+      ],
+      "question": "Find the top 10 ranked songs in 2010. Output the rank, group name, and song name, but do not show the same song twice. Sort the result based on the rank in ascending order.",
+      "schema_sql": {
+        "billboard_top_100_year_end": [
+          {
+            "name": "artist",
+            "type": "text"
+          },
+          {
+            "name": "group_name",
+            "type": "text"
+          },
+          {
+            "name": "id",
+            "type": "bigint"
+          },
+          {
+            "name": "song_name",
+            "type": "text"
+          },
+          {
+            "name": "year",
+            "type": "bigint"
+          },
+          {
+            "name": "year_rank",
+            "type": "bigint"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 9905,
+      "slug": "9905-highest-target-under-manager",
+      "title": "Highest Target Under Manager",
+      "difficulty": 2,
+      "category": "Subquery/CTE",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-14",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9905-highest-target-under-manager?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9905-highest-target-under-manager?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9905-highest-target-under-manager?code_type=6"
+      },
+      "tables": [
+        "salesforce_employees"
+      ],
+      "question": "-- Identify the employee(s) working under manager `manager_id=13` who have achieved the highest target. Return each such employee’s first name alongside the target value. The goal is to display the maximum target among all employees under `manager_id=13` and show which employee(s) reached that top value.",
+      "schema_sql": {
+        "salesforce_employees": [
+          {
+            "name": "address",
+            "type": "text"
+          },
+          {
+            "name": "age",
+            "type": "bigint"
+          },
+          {
+            "name": "bonus",
+            "type": "bigint"
+          },
+          {
+            "name": "city",
+            "type": "text"
+          },
+          {
+            "name": "department",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "text"
+          },
+          {
+            "name": "employee_title",
+            "type": "text"
+          },
+          {
+            "name": "first_name",
+            "type": "text"
+          },
+          {
+            "name": "id",
+            "type": "bigint"
+          },
+          {
+            "name": "last_name",
+            "type": "text"
+          },
+          {
+            "name": "manager_id",
+            "type": "bigint"
+          },
+          {
+            "name": "salary",
+            "type": "bigint"
+          },
+          {
+            "name": "sex",
+            "type": "text"
+          },
+          {
+            "name": "target",
+            "type": "bigint"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 9817,
+      "slug": "9817-find-the-number-of-times-each-word-appears-in-drafts",
+      "title": "Count Occurrences Of Words In Drafts",
+      "difficulty": 2,
+      "category": "String/Text",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-15",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9817-find-the-number-of-times-each-word-appears-in-drafts?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9817-find-the-number-of-times-each-word-appears-in-drafts?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9817-find-the-number-of-times-each-word-appears-in-drafts?code_type=6"
+      },
+      "tables": [
+        "google_file_store"
+      ],
+      "question": "Find the number of times each word appears in the `contents` column across all rows in the `google_file_store` dataset. Output two columns: `word` and `occurrences`.",
+      "schema_sql": {
+        "google_file_store": [
+          {
+            "name": "contents",
+            "type": "text"
+          },
+          {
+            "name": "filename",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    }
+  ],
+  "selection_meta": {
+    "pool_sizes_freemium": {
+      "easy": 29,
+      "medium": 33,
+      "hard": "not queried (non-Monday; no Hard slot today)"
+    },
+    "queued_ids_count": 57,
+    "fresh_remaining": {
+      "easy": 4,
+      "medium": 0
+    },
+    "fresh_easy_pool": [
+      2169,
+      9991,
+      9992,
+      10127
+    ],
+    "excluded_attempted_ids": [
+      9917,
+      10087,
+      10183,
+      10299
+    ],
+    "excluded_attempted_note": "Easy-pool questions attempted on StrataScratch web (some back in 2024-2025) but never placed in a daily set — removed from the fresh-Easy pool per rule 4c. (Medium fresh pool is empty: all 33 freemium Medium questions are already in past daily sets.)",
+    "repeats_used": [
+      {
+        "id": 9813,
+        "reason": "unsolved",
+        "last_queued": "2026-06-11"
+      },
+      {
+        "id": 9650,
+        "reason": "unsolved",
+        "last_queued": "2026-06-14"
+      },
+      {
+        "id": 9905,
+        "reason": "unsolved",
+        "last_queued": "2026-06-14"
+      },
+      {
+        "id": 9817,
+        "reason": "unsolved",
+        "last_queued": "2026-06-15"
+      }
+    ],
+    "repeat_policy_note": "Medium fresh pool exhausted (0 of 33). Per policy 4.5 (option 1), all 4 Medium are repeats drawn from never-solved queued questions (priority 1: unsolved). None has ever been attempted (attempt_count=0), so each is a genuine first attempt despite being re-queued. Oldest-first within the diversity greedy; the two oldest unsolved (2102, 2170, both Aggregation) were skipped because the Easy pick already covers Aggregation.",
+    "category_balance_check": "5 distinct categories: Aggregation (9992, Easy), Join (9813), Filter/Basic (9650), Subquery/CTE (9905), String/Text (9817). Categories re-derived from question bodies via the keyword heuristic.",
+    "attempts_history": {
+      "total_attempt_records": 2237,
+      "unique_questions_attempted": 94,
+      "unique_questions_solved": 89,
+      "pages_paginated": "offset 0–2200 (limit 100), last page count=37; history back to 2024-12-23"
+    },
+    "generated_at": "2026-06-17T23:20:22.906929+00:00",
+    "generated_by": "scheduled task (stratascratch-daily-set)"
+  }
+}

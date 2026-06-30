@@ -1,0 +1,207 @@
+{
+  "date": "2026-06-30",
+  "weekday": "Tuesday",
+  "difficulty_mix": {
+    "easy": 1,
+    "medium": 4,
+    "hard": 0,
+    "rule": "Non-Monday weekday -> 1 Easy + 4 Medium (weekday determined from Ina's local date; see selection_meta.notes)"
+  },
+  "languages": [
+    "sql (PostgreSQL)",
+    "python (pandas)",
+    "pyspark"
+  ],
+  "questions": [
+    {
+      "id": 2168,
+      "slug": "2168-users-missing-phone-numbers",
+      "title": "Users Missing Phone Numbers",
+      "difficulty": 1,
+      "category": "Filter/Basic",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-09",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/2168-users-missing-phone-numbers?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/2168-users-missing-phone-numbers?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/2168-users-missing-phone-numbers?code_type=6"
+      },
+      "tables": [
+        "fintech_app_users"
+      ],
+      "question": "-- The product team is launching a new WhatsApp notification feature and needs to identify users who haven't provided their phone numbers yet. These users will be shown a prompt to add their contact information.\n\n-- Find all users who have not provided a phone number. Return the `user ID` and `name`.",
+      "schema_sql": {
+        "fintech_app_users": [
+          {"name": "phone_number", "type": "text"},
+          {"name": "user_id", "type": "bigint"},
+          {"name": "user_name", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 10048,
+      "slug": "10048-top-businesses-with-most-reviews",
+      "title": "Top Businesses With Most Reviews",
+      "difficulty": 2,
+      "category": "Window Functions",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-21",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10048-top-businesses-with-most-reviews?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10048-top-businesses-with-most-reviews?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10048-top-businesses-with-most-reviews?code_type=6"
+      },
+      "tables": [
+        "yelp_business"
+      ],
+      "question": "-- Find the top 5 businesses with most reviews. Assume that each row has a unique business_id such that the total reviews for each business is listed on each row. Output the business name along with the total number of reviews and order your results by the total reviews in descending order.\n\n-- If there are ties in review counts, businesses with the same number of reviews receive the same rank, and subsequent ranks are skipped accordingly (e.g., if two businesses tie for rank 4, the next business receives rank 6, skipping rank 5).",
+      "schema_sql": {
+        "yelp_business": [
+          {"name": "address", "type": "text"},
+          {"name": "business_id", "type": "text"},
+          {"name": "categories", "type": "text"},
+          {"name": "city", "type": "text"},
+          {"name": "is_open", "type": "bigint"},
+          {"name": "latitude", "type": "double precision"},
+          {"name": "longitude", "type": "double precision"},
+          {"name": "name", "type": "text"},
+          {"name": "neighborhood", "type": "text"},
+          {"name": "postal_code", "type": "text"},
+          {"name": "review_count", "type": "bigint"},
+          {"name": "stars", "type": "double precision"},
+          {"name": "state", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 10078,
+      "slug": "10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality",
+      "title": "Matching Similar Hosts and Guests",
+      "difficulty": 2,
+      "category": "Join",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-22",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality?code_type=6"
+      },
+      "tables": [
+        "airbnb_hosts",
+        "airbnb_guests"
+      ],
+      "question": "-- Find matching hosts and guests pairs in a way that they are both of the same gender and nationality.\n-- Output the host id and the guest id of matched pair.",
+      "schema_sql": {
+        "airbnb_hosts": [
+          {"name": "age", "type": "bigint"},
+          {"name": "gender", "type": "text"},
+          {"name": "host_id", "type": "bigint"},
+          {"name": "nationality", "type": "text"}
+        ],
+        "airbnb_guests": [
+          {"name": "age", "type": "bigint"},
+          {"name": "gender", "type": "text"},
+          {"name": "guest_id", "type": "bigint"},
+          {"name": "nationality", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 10049,
+      "slug": "10049-reviews-of-categories",
+      "title": "Reviews of Categories",
+      "difficulty": 2,
+      "category": "String",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-23",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10049-reviews-of-categories?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10049-reviews-of-categories?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10049-reviews-of-categories?code_type=6"
+      },
+      "tables": [
+        "yelp_business"
+      ],
+      "question": "-- Calculate number of reviews for every business category. Output the category along with the total number of reviews. Order by total reviews in descending order.",
+      "schema_sql": {
+        "yelp_business": [
+          {"name": "address", "type": "text"},
+          {"name": "business_id", "type": "text"},
+          {"name": "categories", "type": "text"},
+          {"name": "city", "type": "text"},
+          {"name": "is_open", "type": "bigint"},
+          {"name": "latitude", "type": "double precision"},
+          {"name": "longitude", "type": "double precision"},
+          {"name": "name", "type": "text"},
+          {"name": "neighborhood", "type": "text"},
+          {"name": "postal_code", "type": "text"},
+          {"name": "review_count", "type": "bigint"},
+          {"name": "stars", "type": "double precision"},
+          {"name": "state", "type": "text"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    },
+    {
+      "id": 9650,
+      "slug": "9650-find-the-top-10-ranked-songs-in-2010",
+      "title": "Top 10 Songs 2010",
+      "difficulty": 2,
+      "category": "Date/Time",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-23",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9650-find-the-top-10-ranked-songs-in-2010?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9650-find-the-top-10-ranked-songs-in-2010?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9650-find-the-top-10-ranked-songs-in-2010?code_type=6"
+      },
+      "tables": [
+        "billboard_top_100_year_end"
+      ],
+      "question": "Find the top 10 ranked songs in 2010. Output the rank, group name, and song name, but do not show the same song twice. Sort the result based on the rank in ascending order.",
+      "schema_sql": {
+        "billboard_top_100_year_end": [
+          {"name": "artist", "type": "text"},
+          {"name": "group_name", "type": "text"},
+          {"name": "id", "type": "bigint"},
+          {"name": "song_name", "type": "text"},
+          {"name": "year", "type": "bigint"},
+          {"name": "year_rank", "type": "bigint"}
+        ]
+      },
+      "supported_languages": ["sql", "python", "mysql", "mssql", "r", "pyspark", "oracle", "polars"]
+    }
+  ],
+  "selection_meta": {
+    "pool_sizes_freemium": {"easy": 29, "medium": 33, "hard": null},
+    "queued_ids_count": 64,
+    "fresh_remaining": {"easy": 0, "medium": 0},
+    "excluded_attempted_ids": [9917, 10183, 10299],
+    "repeats_used": [
+      {"id": 2168, "reason": "unsolved", "last_queued": "2026-06-09"},
+      {"id": 10048, "reason": "unsolved", "last_queued": "2026-06-21"},
+      {"id": 10078, "reason": "unsolved", "last_queued": "2026-06-22"},
+      {"id": 10049, "reason": "unsolved", "last_queued": "2026-06-23"},
+      {"id": 9650, "reason": "unsolved", "last_queued": "2026-06-23"}
+    ],
+    "category_balance_check": "5 distinct categories: Filter/Basic (2168), Window Functions (10048), Join (10078), String (10049), Date/Time (9650). All 5 are unsolved repeats.",
+    "generated_at": "2026-06-29T23:22:20Z",
+    "generated_by": "scheduled task",
+    "notes": [
+      "Date: bash 'date' defaulted to UTC = 2026-06-29 23:09 Monday, but Ina's local date in both Asia/Seoul and Australia/Sydney is 2026-06-30 Tuesday. Daily files are keyed to Ina's local date (yesterday's file 2026-06-29.json was written at UTC 2026-06-28 23:29 = local 06-29 morning), so today's file is 2026-06-30.json with the non-Monday mix (1 Easy + 4 Medium).",
+      "Fresh pool fully exhausted at BOTH difficulties. Easy: the only 3 never-queued freemium Easy questions (9917, 10183, 10299) were already attempted AND solved directly on the site, so per rule 4c none are fresh. Medium: all 33 freemium Medium questions have been queued before. Therefore every slot is a repeat selected via policy 4.5 (unsolved-first, oldest last_queued first).",
+      "Hard freemium pool was not queried (non-Monday, no Hard slot).",
+      "Category labels are keyword/schema heuristics. 10049 'Reviews of Categories' is labelled String because yelp_business.categories is a single delimited text column requiring a split; if treated as a plain GROUP BY it would be Aggregation - either way it is distinct from the other four selected categories.",
+      "Attempt history fully paginated: 90 distinct solved question_ids, 95 distinct attempted question_ids.",
+      "No tool errors during generation."
+    ]
+  }
+}

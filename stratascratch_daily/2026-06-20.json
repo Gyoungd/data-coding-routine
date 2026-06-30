@@ -1,0 +1,444 @@
+{
+  "date": "2026-06-20",
+  "weekday": "Saturday",
+  "difficulty_mix": {
+    "easy": 1,
+    "medium": 4,
+    "hard": 0,
+    "rule": "Non-Monday: 1 Easy + 4 Medium"
+  },
+  "languages": [
+    "sql (PostgreSQL)",
+    "python (pandas)",
+    "pyspark"
+  ],
+  "questions": [
+    {
+      "id": 9991,
+      "slug": "9991-top-ranked-songs",
+      "title": "Top Ranked Songs",
+      "difficulty": 1,
+      "category": "Aggregation",
+      "is_repeat": false,
+      "repeat_reason": null,
+      "last_queued": null,
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9991-top-ranked-songs?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9991-top-ranked-songs?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9991-top-ranked-songs?code_type=6"
+      },
+      "tables": [
+        "spotify_worldwide_daily_song_ranking"
+      ],
+      "question": "Find songs that have ranked in the top position. Output the track name and the number of times it ranked at the top. Sort your records by the number of times the song was in the top position in descending order.",
+      "schema_sql": {
+        "spotify_worldwide_daily_song_ranking": [
+          {
+            "name": "artist",
+            "type": "text"
+          },
+          {
+            "name": "id",
+            "type": "bigint"
+          },
+          {
+            "name": "position",
+            "type": "bigint"
+          },
+          {
+            "name": "region",
+            "type": "text"
+          },
+          {
+            "name": "stream_date",
+            "type": "date"
+          },
+          {
+            "name": "streams",
+            "type": "bigint"
+          },
+          {
+            "name": "trackname",
+            "type": "text"
+          },
+          {
+            "name": "url",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 2170,
+      "slug": "2170-department-workforce-analysis",
+      "title": "Department Workforce Analysis",
+      "difficulty": 2,
+      "category": "Aggregation",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-11",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/2170-department-workforce-analysis?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/2170-department-workforce-analysis?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/2170-department-workforce-analysis?code_type=6"
+      },
+      "tables": [
+        "techcorp_workforce"
+      ],
+      "question": "The workforce planning team is analyzing department growth since the company's expansion, focusing on teams that have grown substantially. For each department with 5 or more employees hired after 2020, return the name, headcount, total payroll, and average salary.",
+      "schema_sql": {
+        "techcorp_workforce": [
+          {
+            "name": "department",
+            "type": "text"
+          },
+          {
+            "name": "first_name",
+            "type": "text"
+          },
+          {
+            "name": "id",
+            "type": "bigint"
+          },
+          {
+            "name": "joining_date",
+            "type": "date"
+          },
+          {
+            "name": "last_name",
+            "type": "text"
+          },
+          {
+            "name": "phone_number",
+            "type": "text"
+          },
+          {
+            "name": "salary",
+            "type": "bigint"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 9856,
+      "slug": "9856-find-employees-with-the-same-salary",
+      "title": "Employees With the Same Salary",
+      "difficulty": 2,
+      "category": "Subquery/CTE",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-17",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9856-find-employees-with-the-same-salary?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9856-find-employees-with-the-same-salary?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9856-find-employees-with-the-same-salary?code_type=6"
+      },
+      "tables": [
+        "worker"
+      ],
+      "question": "Find employees who earn the same salary. Output the worker id along with the first name and the salary in descending order.",
+      "schema_sql": {
+        "worker": [
+          {
+            "name": "department",
+            "type": "text"
+          },
+          {
+            "name": "first_name",
+            "type": "text"
+          },
+          {
+            "name": "joining_date",
+            "type": "date"
+          },
+          {
+            "name": "last_name",
+            "type": "text"
+          },
+          {
+            "name": "salary",
+            "type": "bigint"
+          },
+          {
+            "name": "worker_id",
+            "type": "bigint"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 9897,
+      "slug": "9897-highest-salary-in-department",
+      "title": "Highest Salary In Department",
+      "difficulty": 2,
+      "category": "Window Functions",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-16",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9897-highest-salary-in-department?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9897-highest-salary-in-department?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9897-highest-salary-in-department?code_type=6"
+      },
+      "tables": [
+        "employee"
+      ],
+      "question": "Find the employee with the highest salary per department. Output the department name, employee's first name along with the corresponding salary.",
+      "schema_sql": {
+        "employee": [
+          {
+            "name": "address",
+            "type": "text"
+          },
+          {
+            "name": "age",
+            "type": "bigint"
+          },
+          {
+            "name": "bonus",
+            "type": "bigint"
+          },
+          {
+            "name": "city",
+            "type": "text"
+          },
+          {
+            "name": "department",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "text"
+          },
+          {
+            "name": "employee_title",
+            "type": "text"
+          },
+          {
+            "name": "first_name",
+            "type": "text"
+          },
+          {
+            "name": "id",
+            "type": "bigint"
+          },
+          {
+            "name": "last_name",
+            "type": "text"
+          },
+          {
+            "name": "manager_id",
+            "type": "bigint"
+          },
+          {
+            "name": "salary",
+            "type": "bigint"
+          },
+          {
+            "name": "sex",
+            "type": "text"
+          },
+          {
+            "name": "target",
+            "type": "bigint"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 10156,
+      "slug": "10156-number-of-units-per-nationality",
+      "title": "Number Of Units Per Nationality",
+      "difficulty": 2,
+      "category": "Join (multi-table)",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-16",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10156-number-of-units-per-nationality?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10156-number-of-units-per-nationality?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10156-number-of-units-per-nationality?code_type=6"
+      },
+      "tables": [
+        "airbnb_hosts",
+        "airbnb_units"
+      ],
+      "question": "Write a query that returns how many different apartment-type units (counted by distinct unit_id) are owned by people under 30, grouped by their nationality. Sort the results by the number of apartments in descending order.",
+      "schema_sql": {
+        "airbnb_hosts": [
+          {
+            "name": "age",
+            "type": "bigint"
+          },
+          {
+            "name": "gender",
+            "type": "text"
+          },
+          {
+            "name": "host_id",
+            "type": "bigint"
+          },
+          {
+            "name": "nationality",
+            "type": "text"
+          }
+        ],
+        "airbnb_units": [
+          {
+            "name": "city",
+            "type": "text"
+          },
+          {
+            "name": "country",
+            "type": "text"
+          },
+          {
+            "name": "host_id",
+            "type": "bigint"
+          },
+          {
+            "name": "n_bedrooms",
+            "type": "bigint"
+          },
+          {
+            "name": "n_beds",
+            "type": "bigint"
+          },
+          {
+            "name": "unit_id",
+            "type": "text"
+          },
+          {
+            "name": "unit_type",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    }
+  ],
+  "selection_meta": {
+    "pool_sizes_freemium": {
+      "easy": 29,
+      "medium": 33,
+      "hard": null
+    },
+    "queued_ids_count": 59,
+    "fresh_remaining": {
+      "easy": 2,
+      "medium": 0
+    },
+    "fresh_easy_candidate_ids": [
+      9991,
+      10127
+    ],
+    "excluded_attempted_solved_ids_sample": [
+      2101,
+      10130,
+      2167,
+      10024,
+      2172,
+      10085,
+      9911,
+      10090,
+      10004,
+      10553,
+      2024,
+      9894,
+      10322,
+      9842,
+      2110,
+      9892,
+      9805,
+      9917,
+      10353,
+      10304,
+      10183,
+      10299,
+      10087,
+      10285,
+      10352,
+      10077,
+      2005
+    ],
+    "repeats_used": [
+      {
+        "id": 2170,
+        "reason": "unsolved",
+        "last_queued": "2026-06-11"
+      },
+      {
+        "id": 9856,
+        "reason": "unsolved",
+        "last_queued": "2026-06-17"
+      },
+      {
+        "id": 9897,
+        "reason": "unsolved",
+        "last_queued": "2026-06-16"
+      },
+      {
+        "id": 10156,
+        "reason": "unsolved",
+        "last_queued": "2026-06-16"
+      }
+    ],
+    "category_balance_check": "4 distinct categories across 5 questions: Aggregation x2 (9991 Easy, 2170), Subquery/CTE (9856), Window Functions (9897), Join multi-table (10156). Both fresh Easy candidates were Aggregation-type, so 4 distinct is the max achievable. Medium freemium pool fully exhausted (all 33 previously queued) -> all 4 Medium slots are unsolved repeats. Strict oldest-last-queued order was relaxed where needed to satisfy step-6 category diversity (only Window/Subquery candidates available were recently queued).",
+    "generated_at": "2026-06-19T23:13:35.176577Z",
+    "generated_by": "scheduled task",
+    "notes": "Target date taken from session environment (Saturday 2026-06-20); host bash clock was UTC (2026-06-19). Latest existing daily file was 2026-06-19.json, confirming 2026-06-20 is the next set.",
+    "limitations": {
+      "attempts_pagination": "get_my_attempts full output exceeded the MCP token limit. Derived solved_ids from the is_correct=true filtered page (100 most recent solved attempts) plus the recent-100 unfiltered page. Solved attempts older than the most-recent 100 may be missing, so a Medium flagged 'unsolved' could in rare cases have an older correct attempt. Acceptable given freemium constraints.",
+      "category_heuristic": "Categories assigned by keyword/title/table-count heuristic, not authoritative tags."
+    }
+  }
+}

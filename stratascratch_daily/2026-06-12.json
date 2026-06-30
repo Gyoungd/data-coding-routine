@@ -1,0 +1,454 @@
+{
+  "date": "2026-06-12",
+  "weekday": "Friday",
+  "difficulty_mix": {
+    "easy": 1,
+    "medium": 4,
+    "hard": 0,
+    "rule": "Non-Monday: 1 Easy + 4 Medium"
+  },
+  "languages": [
+    "sql (PostgreSQL)",
+    "python (pandas)",
+    "pyspark"
+  ],
+  "questions": [
+    {
+      "id": 9728,
+      "slug": "9728-inspections-that-resulted-in-violations",
+      "title": "Number of violations",
+      "difficulty": 1,
+      "category": "Date/Time",
+      "is_repeat": false,
+      "repeat_reason": null,
+      "last_queued": null,
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9728-inspections-that-resulted-in-violations?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9728-inspections-that-resulted-in-violations?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9728-inspections-that-resulted-in-violations?code_type=6"
+      },
+      "tables": [
+        "sf_restaurant_health_violations"
+      ],
+      "question": "-- You are given a dataset of health inspections that includes details about violations. Each row represents an inspection, and if an inspection resulted in a violation, the `violation_id` column will contain a value.\n\nCount the total number of violations that occurred at **'Roxanne Cafe'** for each year, based on the inspection date. Output the year and the corresponding number of violations in ascending order of the year.",
+      "schema_sql": {
+        "sf_restaurant_health_violations": [
+          {
+            "name": "business_address",
+            "type": "text"
+          },
+          {
+            "name": "business_city",
+            "type": "text"
+          },
+          {
+            "name": "business_id",
+            "type": "bigint"
+          },
+          {
+            "name": "business_latitude",
+            "type": "double precision"
+          },
+          {
+            "name": "business_location",
+            "type": "text"
+          },
+          {
+            "name": "business_longitude",
+            "type": "double precision"
+          },
+          {
+            "name": "business_name",
+            "type": "text"
+          },
+          {
+            "name": "business_phone_number",
+            "type": "double precision"
+          },
+          {
+            "name": "business_postal_code",
+            "type": "double precision"
+          },
+          {
+            "name": "business_state",
+            "type": "text"
+          },
+          {
+            "name": "inspection_date",
+            "type": "date"
+          },
+          {
+            "name": "inspection_id",
+            "type": "text"
+          },
+          {
+            "name": "inspection_score",
+            "type": "double precision"
+          },
+          {
+            "name": "inspection_type",
+            "type": "text"
+          },
+          {
+            "name": "risk_category",
+            "type": "text"
+          },
+          {
+            "name": "violation_description",
+            "type": "text"
+          },
+          {
+            "name": "violation_id",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 10060,
+      "slug": "10060-top-cool-votes",
+      "title": "Top Cool Votes",
+      "difficulty": 2,
+      "category": "Aggregation",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-05",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10060-top-cool-votes?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10060-top-cool-votes?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10060-top-cool-votes?code_type=6"
+      },
+      "tables": [
+        "yelp_reviews"
+      ],
+      "question": "-- Find the `review_text` that received the highest number of `cool` votes.\n-- Output the business name along with the review text with the highest number of `cool` votes.",
+      "schema_sql": {
+        "yelp_reviews": [
+          {
+            "name": "business_name",
+            "type": "text"
+          },
+          {
+            "name": "cool",
+            "type": "bigint"
+          },
+          {
+            "name": "funny",
+            "type": "bigint"
+          },
+          {
+            "name": "review_date",
+            "type": "date"
+          },
+          {
+            "name": "review_id",
+            "type": "text"
+          },
+          {
+            "name": "review_text",
+            "type": "text"
+          },
+          {
+            "name": "stars",
+            "type": "text"
+          },
+          {
+            "name": "useful",
+            "type": "bigint"
+          },
+          {
+            "name": "user_id",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 10048,
+      "slug": "10048-top-businesses-with-most-reviews",
+      "title": "Top Businesses With Most Reviews",
+      "difficulty": 2,
+      "category": "Window Functions",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-07",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10048-top-businesses-with-most-reviews?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10048-top-businesses-with-most-reviews?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10048-top-businesses-with-most-reviews?code_type=6"
+      },
+      "tables": [
+        "yelp_business"
+      ],
+      "question": "-- Find the top 5 businesses with most reviews. Assume that each row has a unique business_id such that the total reviews for each business is listed on each row. Output the business name along with the total number of reviews and order your results by the total reviews in descending order.\n\n-- If there are ties in review counts, businesses with the same number of reviews receive the same rank, and subsequent ranks are skipped accordingly (e.g., if two businesses tie for rank 4, the next business receives rank 6, skipping rank 5).",
+      "schema_sql": {
+        "yelp_business": [
+          {
+            "name": "address",
+            "type": "text"
+          },
+          {
+            "name": "business_id",
+            "type": "text"
+          },
+          {
+            "name": "categories",
+            "type": "text"
+          },
+          {
+            "name": "city",
+            "type": "text"
+          },
+          {
+            "name": "is_open",
+            "type": "bigint"
+          },
+          {
+            "name": "latitude",
+            "type": "double precision"
+          },
+          {
+            "name": "longitude",
+            "type": "double precision"
+          },
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "neighborhood",
+            "type": "text"
+          },
+          {
+            "name": "postal_code",
+            "type": "text"
+          },
+          {
+            "name": "review_count",
+            "type": "bigint"
+          },
+          {
+            "name": "stars",
+            "type": "double precision"
+          },
+          {
+            "name": "state",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 9856,
+      "slug": "9856-find-employees-with-the-same-salary",
+      "title": "Employees With the Same Salary",
+      "difficulty": 2,
+      "category": "Subquery/CTE",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-07",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9856-find-employees-with-the-same-salary?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9856-find-employees-with-the-same-salary?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9856-find-employees-with-the-same-salary?code_type=6"
+      },
+      "tables": [
+        "worker"
+      ],
+      "question": "-- Find employees who earn the same salary.\n\n-- Output the worker id along with the first name and the salary in descending order.",
+      "schema_sql": {
+        "worker": [
+          {
+            "name": "department",
+            "type": "text"
+          },
+          {
+            "name": "first_name",
+            "type": "text"
+          },
+          {
+            "name": "joining_date",
+            "type": "date"
+          },
+          {
+            "name": "last_name",
+            "type": "text"
+          },
+          {
+            "name": "salary",
+            "type": "bigint"
+          },
+          {
+            "name": "worker_id",
+            "type": "bigint"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 10078,
+      "slug": "10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality",
+      "title": "Matching Similar Hosts and Guests",
+      "difficulty": 2,
+      "category": "Join (multi-table)",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-07",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10078-find-matching-hosts-and-guests-in-a-way-that-they-are-both-of-the-same-gender-and-nationality?code_type=6"
+      },
+      "tables": [
+        "airbnb_hosts",
+        "airbnb_guests"
+      ],
+      "question": "-- Find matching hosts and guests pairs in a way that they are both of the same gender and nationality.\n-- Output the host id and the guest id of matched pair.",
+      "schema_sql": {
+        "airbnb_hosts": [
+          {
+            "name": "age",
+            "type": "bigint"
+          },
+          {
+            "name": "gender",
+            "type": "text"
+          },
+          {
+            "name": "host_id",
+            "type": "bigint"
+          },
+          {
+            "name": "nationality",
+            "type": "text"
+          }
+        ],
+        "airbnb_guests": [
+          {
+            "name": "age",
+            "type": "bigint"
+          },
+          {
+            "name": "gender",
+            "type": "text"
+          },
+          {
+            "name": "guest_id",
+            "type": "bigint"
+          },
+          {
+            "name": "nationality",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    }
+  ],
+  "selection_meta": {
+    "pool_sizes_freemium": {
+      "easy": 29,
+      "medium": 33,
+      "hard": 5
+    },
+    "queued_ids_count": 50,
+    "fresh_remaining": {
+      "easy": 9,
+      "medium": 0
+    },
+    "excluded_attempted_ids": [
+      9917,
+      10087,
+      10183,
+      10299,
+      10353
+    ],
+    "excluded_attempted_ids_note": "Easy-pool questions excluded specifically because already attempted on the website (not already excluded by queued_ids). All 12 Medium-pool attempted IDs were already in queued_ids, so they add no marginal exclusion.",
+    "repeats_used": [
+      {
+        "id": 10060,
+        "reason": "unsolved",
+        "last_queued": "2026-06-05"
+      },
+      {
+        "id": 10048,
+        "reason": "unsolved",
+        "last_queued": "2026-06-07"
+      },
+      {
+        "id": 9856,
+        "reason": "unsolved",
+        "last_queued": "2026-06-07"
+      },
+      {
+        "id": 10078,
+        "reason": "unsolved",
+        "last_queued": "2026-06-07"
+      }
+    ],
+    "category_balance_check": "5 distinct categories achieved: Date/Time (9728, Easy), Aggregation (10060), Window Functions (10048), Subquery/CTE (9856), Join multi-table (10078).",
+    "attempts_summary": {
+      "total_attempts": 2174,
+      "questions_attempted": 91,
+      "questions_solved": 87,
+      "source": "get_my_progress (authoritative dashboard aggregate)"
+    },
+    "notes": [
+      "DATE RESOLUTION: bash `date` returns UTC (2026-06-11 Thursday); session/local date is 2026-06-12 Friday (KST, UTC+9). Used KST, consistent with the daily-file naming history (e.g. 2026-06-11.json was created Jun 10 23:15 UTC = Jun 11 morning KST). Latest existing file was 2026-06-11.json, so 2026-06-12.json was the correct, non-duplicate target.",
+      "MEDIUM POOL EXHAUSTED: all 33 freemium Medium questions have already appeared in past daily sets (queued_ids). Per policy 4.5, all 4 Medium today are repeats with reason 'unsolved' (queued but never solved correctly), selected oldest-last_queued-first while maximizing category diversity. 21 unsolved Medium were available; 12 are already solved.",
+      "SOLVED-SET RECONCILIATION: an initial attempt-history parse undercounted solved questions (84). Reconciled against get_my_progress (87 solved) by directly verifying the 7 ambiguous IDs; 10004, 10090, 10553 confirmed solved (is_correct=true), so they were excluded from unsolved-repeat candidates. Genuinely unsolved attempted IDs: 2007, 2050, 2145, 9688.",
+      "Easy slot 9728 chosen from 9 truly-fresh Easy candidates because its Date/Time category was distinct from all 4 Medium categories, yielding 5 distinct categories overall."
+    ],
+    "generated_at": "2026-06-12T10:08:13.978606+09:00",
+    "generated_by": "scheduled task"
+  }
+}

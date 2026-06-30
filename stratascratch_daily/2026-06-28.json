@@ -1,0 +1,597 @@
+{
+  "date": "2026-06-28",
+  "weekday": "Sunday",
+  "difficulty_mix": {
+    "easy": 1,
+    "medium": 4,
+    "hard": 0,
+    "rule": "Non-Monday: 1 Easy + 4 Medium"
+  },
+  "languages": [
+    "sql (PostgreSQL)",
+    "python (pandas)",
+    "pyspark"
+  ],
+  "questions": [
+    {
+      "id": 9688,
+      "slug": "9688-churro-activity-date",
+      "title": "Churro Activity Date",
+      "difficulty": 1,
+      "category": "Filter/Basic",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-05",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9688-churro-activity-date?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9688-churro-activity-date?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9688-churro-activity-date?code_type=6"
+      },
+      "tables": [
+        "los_angeles_restaurant_health_inspections"
+      ],
+      "question": "--  Find the inspection date and risk category (`pe_description`) of facilities named 'STREET CHURROS' that received a score below 95.",
+      "schema_sql": {
+        "los_angeles_restaurant_health_inspections": [
+          {
+            "name": "activity_date",
+            "type": "date"
+          },
+          {
+            "name": "employee_id",
+            "type": "text"
+          },
+          {
+            "name": "facility_address",
+            "type": "text"
+          },
+          {
+            "name": "facility_city",
+            "type": "text"
+          },
+          {
+            "name": "facility_id",
+            "type": "text"
+          },
+          {
+            "name": "facility_name",
+            "type": "text"
+          },
+          {
+            "name": "facility_state",
+            "type": "text"
+          },
+          {
+            "name": "facility_zip",
+            "type": "text"
+          },
+          {
+            "name": "grade",
+            "type": "text"
+          },
+          {
+            "name": "owner_id",
+            "type": "text"
+          },
+          {
+            "name": "owner_name",
+            "type": "text"
+          },
+          {
+            "name": "pe_description",
+            "type": "text"
+          },
+          {
+            "name": "program_element_pe",
+            "type": "bigint"
+          },
+          {
+            "name": "program_name",
+            "type": "text"
+          },
+          {
+            "name": "program_status",
+            "type": "text"
+          },
+          {
+            "name": "record_id",
+            "type": "text"
+          },
+          {
+            "name": "score",
+            "type": "bigint"
+          },
+          {
+            "name": "serial_number",
+            "type": "text"
+          },
+          {
+            "name": "service_code",
+            "type": "bigint"
+          },
+          {
+            "name": "service_description",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 10060,
+      "slug": "10060-top-cool-votes",
+      "title": "Top Cool Votes",
+      "difficulty": 2,
+      "category": "Aggregation",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-19",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10060-top-cool-votes?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10060-top-cool-votes?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10060-top-cool-votes?code_type=6"
+      },
+      "tables": [
+        "yelp_reviews"
+      ],
+      "question": "-- Find the `review_text` that received the highest number of  `cool` votes.\r\n-- Output the business name along with the review text with the highest number of `cool` votes.",
+      "schema_sql": {
+        "yelp_reviews": [
+          {
+            "name": "business_name",
+            "type": "text"
+          },
+          {
+            "name": "cool",
+            "type": "bigint"
+          },
+          {
+            "name": "funny",
+            "type": "bigint"
+          },
+          {
+            "name": "review_date",
+            "type": "date"
+          },
+          {
+            "name": "review_id",
+            "type": "text"
+          },
+          {
+            "name": "review_text",
+            "type": "text"
+          },
+          {
+            "name": "stars",
+            "type": "text"
+          },
+          {
+            "name": "useful",
+            "type": "bigint"
+          },
+          {
+            "name": "user_id",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 9817,
+      "slug": "9817-find-the-number-of-times-each-word-appears-in-drafts",
+      "title": "Count Occurrences Of Words In Drafts",
+      "difficulty": 2,
+      "category": "String/Text",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-21",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9817-find-the-number-of-times-each-word-appears-in-drafts?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9817-find-the-number-of-times-each-word-appears-in-drafts?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9817-find-the-number-of-times-each-word-appears-in-drafts?code_type=6"
+      },
+      "tables": [
+        "google_file_store"
+      ],
+      "question": "Find the number of times each word appears in the `contents` column across all rows in the `google_file_store` dataset. Output two columns: `word` and `occurrences`.",
+      "schema_sql": {
+        "google_file_store": [
+          {
+            "name": "contents",
+            "type": "text"
+          },
+          {
+            "name": "filename",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 10025,
+      "slug": "10025-find-all-possible-varieties-which-occur-in-either-of-the-winemag-datasets",
+      "title": "Find all possible varieties which occur in either of the winemag datasets",
+      "difficulty": 2,
+      "category": "Join (multi-table / UNION)",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-21",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10025-find-all-possible-varieties-which-occur-in-either-of-the-winemag-datasets?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10025-find-all-possible-varieties-which-occur-in-either-of-the-winemag-datasets?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10025-find-all-possible-varieties-which-occur-in-either-of-the-winemag-datasets?code_type=6"
+      },
+      "tables": [
+        "winemag_p1",
+        "winemag_p2"
+      ],
+      "question": "-- Find all possible varieties which occur in either of the winemag datasets.\r\n-- Output unique variety values only.\r\n-- Sort records based on the variety in ascending order.",
+      "schema_sql": {
+        "winemag_p1": [
+          {
+            "name": "country",
+            "type": "text"
+          },
+          {
+            "name": "description",
+            "type": "text"
+          },
+          {
+            "name": "designation",
+            "type": "text"
+          },
+          {
+            "name": "id",
+            "type": "bigint"
+          },
+          {
+            "name": "points",
+            "type": "bigint"
+          },
+          {
+            "name": "price",
+            "type": "double precision"
+          },
+          {
+            "name": "province",
+            "type": "text"
+          },
+          {
+            "name": "region_1",
+            "type": "text"
+          },
+          {
+            "name": "region_2",
+            "type": "text"
+          },
+          {
+            "name": "variety",
+            "type": "text"
+          },
+          {
+            "name": "winery",
+            "type": "text"
+          }
+        ],
+        "winemag_p2": [
+          {
+            "name": "country",
+            "type": "text"
+          },
+          {
+            "name": "description",
+            "type": "text"
+          },
+          {
+            "name": "designation",
+            "type": "text"
+          },
+          {
+            "name": "id",
+            "type": "bigint"
+          },
+          {
+            "name": "points",
+            "type": "bigint"
+          },
+          {
+            "name": "price",
+            "type": "double precision"
+          },
+          {
+            "name": "province",
+            "type": "text"
+          },
+          {
+            "name": "region_1",
+            "type": "text"
+          },
+          {
+            "name": "region_2",
+            "type": "text"
+          },
+          {
+            "name": "taster_name",
+            "type": "text"
+          },
+          {
+            "name": "taster_twitter_handle",
+            "type": "text"
+          },
+          {
+            "name": "title",
+            "type": "text"
+          },
+          {
+            "name": "variety",
+            "type": "text"
+          },
+          {
+            "name": "winery",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 10159,
+      "slug": "10159-ranking-most-active-guests",
+      "title": "Ranking Most Active Guests",
+      "difficulty": 2,
+      "category": "Window Functions",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-23",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10159-ranking-most-active-guests?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10159-ranking-most-active-guests?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10159-ranking-most-active-guests?code_type=6"
+      },
+      "tables": [
+        "airbnb_contacts"
+      ],
+      "question": "Identify the most engaged guests by ranking them according to their overall messaging activity. The most active guest, meaning the one who has exchanged the most messages with hosts, should have the highest rank. If two or more guests have the same number of messages, they should have the same rank. Importantly, the ranking shouldn't skip any numbers, even if many guests share the same rank. Present your results in a clear format, showing the rank, guest identifier, and total number of messages for each guest, ordered from the most to least active.",
+      "schema_sql": {
+        "airbnb_contacts": [
+          {
+            "name": "ds_checkin",
+            "type": "date"
+          },
+          {
+            "name": "ds_checkout",
+            "type": "date"
+          },
+          {
+            "name": "id_guest",
+            "type": "text"
+          },
+          {
+            "name": "id_host",
+            "type": "text"
+          },
+          {
+            "name": "id_listing",
+            "type": "text"
+          },
+          {
+            "name": "n_guests",
+            "type": "bigint"
+          },
+          {
+            "name": "n_messages",
+            "type": "bigint"
+          },
+          {
+            "name": "ts_accepted_at",
+            "type": "timestamp without time zone"
+          },
+          {
+            "name": "ts_booking_at",
+            "type": "timestamp without time zone"
+          },
+          {
+            "name": "ts_contact_at",
+            "type": "timestamp without time zone"
+          },
+          {
+            "name": "ts_reply_at",
+            "type": "timestamp without time zone"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    }
+  ],
+  "selection_meta": {
+    "pool_sizes_freemium": {
+      "easy": 29,
+      "medium": 33,
+      "hard": null
+    },
+    "queued_ids_count": 62,
+    "fresh_remaining": {
+      "easy": 0,
+      "medium": 0
+    },
+    "excluded_attempted_ids": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2010,
+      2014,
+      2015,
+      2016,
+      2017,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026,
+      2041,
+      2042,
+      2045,
+      2050,
+      2052,
+      2056,
+      2061,
+      2072,
+      2080,
+      2081,
+      2083,
+      2091,
+      2100,
+      2101,
+      2109,
+      2110,
+      2126,
+      2127,
+      2129,
+      2145,
+      2151,
+      2156,
+      2159,
+      2161,
+      2167,
+      2172,
+      9598,
+      9602,
+      9613,
+      9617,
+      9618,
+      9619,
+      9620,
+      9622,
+      9688,
+      9805,
+      9842,
+      9891,
+      9892,
+      9894,
+      9911,
+      9915,
+      9917,
+      9924,
+      9972,
+      9991,
+      10004,
+      10024,
+      10026,
+      10077,
+      10085,
+      10087,
+      10090,
+      10128,
+      10130,
+      10176,
+      10183,
+      10184,
+      10277,
+      10285,
+      10299,
+      10300,
+      10304,
+      10308,
+      10314,
+      10315,
+      10318,
+      10322,
+      10351,
+      10352,
+      10353,
+      10544,
+      10545,
+      10553
+    ],
+    "repeats_used": [
+      {
+        "id": 9688,
+        "reason": "unsolved",
+        "last_queued": "2026-06-05"
+      },
+      {
+        "id": 10060,
+        "reason": "unsolved",
+        "last_queued": "2026-06-19"
+      },
+      {
+        "id": 9817,
+        "reason": "unsolved",
+        "last_queued": "2026-06-21"
+      },
+      {
+        "id": 10025,
+        "reason": "unsolved",
+        "last_queued": "2026-06-21"
+      },
+      {
+        "id": 10159,
+        "reason": "unsolved",
+        "last_queued": "2026-06-23"
+      }
+    ],
+    "category_balance_check": "5 distinct categories: Filter/Basic (E), Aggregation, String/Text, Join-UNION (multi-table), Window Functions. No collisions.",
+    "generated_at": "2026-06-27T23:18:38.858099+00:00",
+    "generated_by": "scheduled task",
+    "notes": [
+      "Freemium pool fully exhausted: fresh_easy=0, fresh_medium=0. Every freemium question is already in a past daily set (queued_ids=62) or attempted (93 attempted, 87 solved across 2244 attempts / 23 pages). Per policy 4.5 (option 1), all 5 are repeats with reason='unsolved' (in queued_ids but never is_correct=true), ordered oldest-queued-first.",
+      "Date resolution: workspace shell is UTC and read 2026-06-27 Saturday, but user local time (KST/AEST) is 2026-06-28 Sunday and the Saturday file 2026-06-27.json already exists. Target date set to the user-local Sunday 2026-06-28. Mix = 1 Easy + 4 Medium (non-Monday).",
+      "10025 category: heuristic maps tables>=2 to Join, but the operation is a UNION across winemag_p1/p2 (set operation). Labeled 'Join (multi-table / UNION)'.",
+      "Hard pool not queried (not needed on a non-Monday); pool_sizes_freemium.hard left null rather than guessed.",
+      "Skipped same-age unsolved Mediums 9858 (Filter, would collide with Easy) and 10048 (Aggregation, would collide with 10060) in favor of 10159 to keep 5 distinct categories, per step-6 greedy diversity rule."
+    ]
+  }
+}

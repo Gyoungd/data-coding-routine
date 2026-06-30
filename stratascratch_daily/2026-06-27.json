@@ -1,0 +1,402 @@
+{
+  "date": "2026-06-27",
+  "weekday": "Saturday",
+  "difficulty_mix": {
+    "easy": 1,
+    "medium": 4,
+    "hard": 0,
+    "rule": "Saturday (non-Monday): 1 Easy + 4 Medium"
+  },
+  "languages": [
+    "sql (PostgreSQL)",
+    "python (pandas)",
+    "pyspark"
+  ],
+  "questions": [
+    {
+      "id": 9845,
+      "slug": "9845-find-the-number-of-employees-working-in-the-admin-department",
+      "title": "April Admin Employees",
+      "difficulty": 1,
+      "category": "Date/Time",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-04",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9845-find-the-number-of-employees-working-in-the-admin-department?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9845-find-the-number-of-employees-working-in-the-admin-department?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9845-find-the-number-of-employees-working-in-the-admin-department?code_type=6"
+      },
+      "tables": [
+        "worker"
+      ],
+      "question": "Find the number of employees working in the Admin department that joined in April or later, in any year.",
+      "schema_sql": {
+        "worker": [
+          {
+            "name": "department",
+            "type": "text"
+          },
+          {
+            "name": "first_name",
+            "type": "text"
+          },
+          {
+            "name": "joining_date",
+            "type": "date"
+          },
+          {
+            "name": "last_name",
+            "type": "text"
+          },
+          {
+            "name": "salary",
+            "type": "bigint"
+          },
+          {
+            "name": "worker_id",
+            "type": "bigint"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 2102,
+      "slug": "2102-flags-per-video",
+      "title": "Flags per Video",
+      "difficulty": 2,
+      "category": "Aggregation",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-19",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/2102-flags-per-video?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/2102-flags-per-video?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/2102-flags-per-video?code_type=6"
+      },
+      "tables": [
+        "user_flags"
+      ],
+      "question": "For each video, find how many unique users flagged it. A unique user can be identified using the combination of their first name and last name. Do not consider rows in which there is no flag ID.",
+      "schema_sql": {
+        "user_flags": [
+          {
+            "name": "flag_id",
+            "type": "text"
+          },
+          {
+            "name": "user_firstname",
+            "type": "text"
+          },
+          {
+            "name": "user_lastname",
+            "type": "text"
+          },
+          {
+            "name": "video_id",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 9897,
+      "slug": "9897-highest-salary-in-department",
+      "title": "Highest Salary In Department",
+      "difficulty": 2,
+      "category": "Window Functions",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-20",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9897-highest-salary-in-department?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9897-highest-salary-in-department?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9897-highest-salary-in-department?code_type=6"
+      },
+      "tables": [
+        "employee"
+      ],
+      "question": "Find the employee with the highest salary per department. Output the department name, employee's first name along with the corresponding salary.",
+      "schema_sql": {
+        "employee": [
+          {
+            "name": "address",
+            "type": "text"
+          },
+          {
+            "name": "age",
+            "type": "bigint"
+          },
+          {
+            "name": "bonus",
+            "type": "bigint"
+          },
+          {
+            "name": "city",
+            "type": "text"
+          },
+          {
+            "name": "department",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "text"
+          },
+          {
+            "name": "employee_title",
+            "type": "text"
+          },
+          {
+            "name": "first_name",
+            "type": "text"
+          },
+          {
+            "name": "id",
+            "type": "bigint"
+          },
+          {
+            "name": "last_name",
+            "type": "text"
+          },
+          {
+            "name": "manager_id",
+            "type": "bigint"
+          },
+          {
+            "name": "salary",
+            "type": "bigint"
+          },
+          {
+            "name": "sex",
+            "type": "text"
+          },
+          {
+            "name": "target",
+            "type": "bigint"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 9856,
+      "slug": "9856-find-employees-with-the-same-salary",
+      "title": "Employees With the Same Salary",
+      "difficulty": 2,
+      "category": "Subquery/CTE",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-20",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/9856-find-employees-with-the-same-salary?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/9856-find-employees-with-the-same-salary?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/9856-find-employees-with-the-same-salary?code_type=6"
+      },
+      "tables": [
+        "worker"
+      ],
+      "question": "Find employees who earn the same salary. Output the worker id along with the first name and the salary in descending order.",
+      "schema_sql": {
+        "worker": [
+          {
+            "name": "department",
+            "type": "text"
+          },
+          {
+            "name": "first_name",
+            "type": "text"
+          },
+          {
+            "name": "joining_date",
+            "type": "date"
+          },
+          {
+            "name": "last_name",
+            "type": "text"
+          },
+          {
+            "name": "salary",
+            "type": "bigint"
+          },
+          {
+            "name": "worker_id",
+            "type": "bigint"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    },
+    {
+      "id": 10156,
+      "slug": "10156-number-of-units-per-nationality",
+      "title": "Number Of Units Per Nationality",
+      "difficulty": 2,
+      "category": "Join (multi-table)",
+      "is_repeat": true,
+      "repeat_reason": "unsolved",
+      "last_queued": "2026-06-20",
+      "stratascratch_urls": {
+        "postgresql": "https://platform.stratascratch.com/coding/10156-number-of-units-per-nationality?code_type=1",
+        "python": "https://platform.stratascratch.com/coding/10156-number-of-units-per-nationality?code_type=2",
+        "pyspark": "https://platform.stratascratch.com/coding/10156-number-of-units-per-nationality?code_type=6"
+      },
+      "tables": [
+        "airbnb_hosts",
+        "airbnb_units"
+      ],
+      "question": "Write a query that returns how many different apartment-type units (counted by distinct unit_id) are owned by people under 30, grouped by their nationality. Sort the results by the number of apartments in descending order.",
+      "schema_sql": {
+        "airbnb_hosts": [
+          {
+            "name": "age",
+            "type": "bigint"
+          },
+          {
+            "name": "gender",
+            "type": "text"
+          },
+          {
+            "name": "host_id",
+            "type": "bigint"
+          },
+          {
+            "name": "nationality",
+            "type": "text"
+          }
+        ],
+        "airbnb_units": [
+          {
+            "name": "city",
+            "type": "text"
+          },
+          {
+            "name": "country",
+            "type": "text"
+          },
+          {
+            "name": "host_id",
+            "type": "bigint"
+          },
+          {
+            "name": "n_bedrooms",
+            "type": "bigint"
+          },
+          {
+            "name": "n_beds",
+            "type": "bigint"
+          },
+          {
+            "name": "unit_id",
+            "type": "text"
+          },
+          {
+            "name": "unit_type",
+            "type": "text"
+          }
+        ]
+      },
+      "supported_languages": [
+        "sql",
+        "python",
+        "mysql",
+        "mssql",
+        "r",
+        "pyspark",
+        "oracle",
+        "polars"
+      ]
+    }
+  ],
+  "selection_meta": {
+    "pool_sizes_freemium": {
+      "easy": 29,
+      "medium": 33,
+      "hard": null
+    },
+    "pool_sizes_note": "Hard pool not queried — non-Monday mix needs no Hard (per task step 3).",
+    "queued_ids_count": 62,
+    "fresh_remaining": {
+      "easy": 0,
+      "medium": 0
+    },
+    "excluded_attempted_ids": [
+      9917,
+      10087,
+      10183,
+      10299
+    ],
+    "excluded_attempted_note": "These 4 Easy passed the past-queue exclusion but were removed by step 4c because they appear in the user's attempt history (solved directly, never queued in a daily set). Total unique attempted (educational): 95; solved: 90.",
+    "repeats_used": [
+      {
+        "id": 9845,
+        "reason": "unsolved",
+        "last_queued": "2026-06-04"
+      },
+      {
+        "id": 2102,
+        "reason": "unsolved",
+        "last_queued": "2026-06-19"
+      },
+      {
+        "id": 9897,
+        "reason": "unsolved",
+        "last_queued": "2026-06-20"
+      },
+      {
+        "id": 9856,
+        "reason": "unsolved",
+        "last_queued": "2026-06-20"
+      },
+      {
+        "id": 10156,
+        "reason": "unsolved",
+        "last_queued": "2026-06-20"
+      }
+    ],
+    "category_balance_check": "5 distinct categories — Date/Time (9845), Aggregation (2102), Window Functions (9897), Subquery/CTE (9856), Join multi-table (10156).",
+    "pool_exhaustion_note": "Freemium pools are fully consumed: 0 truly-fresh candidates remain after excluding queued_ids and attempted_ids in BOTH Easy and Medium. All 5 questions selected via the section 4.5 repeat policy, all priority-1 (unsolved queued, oldest last_queued first, greedy for category diversity). No priority-2 (least_recently_used) repeats needed.",
+    "date_source_note": "File dated 2026-06-27 (Saturday) per the app's local date. Sandbox `date` returns UTC, which was still 2026-06-26 (Fri) at generation time due to timezone offset; user-local date is authoritative for the daily set.",
+    "generated_at": "2026-06-26T23:22:17.487718+00:00",
+    "generated_by": "scheduled task",
+    "errors": null
+  }
+}
